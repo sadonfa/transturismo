@@ -1,6 +1,26 @@
 .btn {
   display: flex;
   align-items: center;
+  background: linear-gradient(orange, #cb7a00);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  border-radius: 4px;
+  padding: 0px 16px;
+  height: 40px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  border: none;
+  background: linear-gradient(#cb7a00, orange);
+  cursor: pointer;
+}
+
+.btn-blue {
+  display: flex;
+  align-items: center;
   background: linear-gradient(#2990df, #00a8ff);
   color: #fff;
   font-size: 14px;
@@ -9,9 +29,10 @@
   border-radius: 4px;
   padding: 0px 16px;
   height: 40px;
+  text-decoration: none;
 }
 
-.btn:hover {
+.btn-blue:hover {
   border: none;
   background: linear-gradient(#00a8ff, #2990df);
   cursor: pointer;

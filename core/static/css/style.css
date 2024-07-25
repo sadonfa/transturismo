@@ -105,10 +105,12 @@ body {
   font-weight: bold;
   font-size: 18px;
   padding: 3px 15px;
+  transition: all 200ms;
 }
 
 .nav ul li a:hover {
-  border-bottom: 3px solid #ff8800;
+  color: #ff8800;
+  /* border-bottom: 3px solid #ff8800; */
 }
 
 /* HEADER  */
@@ -357,6 +359,12 @@ body {
   color: white;
   border-start-end-radius: 12px;
   border-end-end-radius: 12px;
+  transition: all 200ms;
+}
+
+.incription form input[type="submit"]:hover {
+  background-color: #003149;
+  cursor: pointer;
 }
 
 /* FOOTER */
@@ -368,6 +376,8 @@ body {
   margin-right: 25px;
   padding-bottom: 35px;
   border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  padding-top: 40px;
 }
 
 .foot1,
