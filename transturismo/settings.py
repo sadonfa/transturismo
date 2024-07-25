@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'trans.urls'
+ROOT_URLCONF = 'transturismo.urls'
 
 TEMPLATES = [
     {
@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'trans.wsgi.application'
+WSGI_APPLICATION = 'transturismo.wsgi.application'
 
 
 # Database
