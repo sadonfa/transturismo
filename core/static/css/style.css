@@ -1,0 +1,532 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Rubik";
+}
+
+.info-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0px auto;
+  margin-bottom: -20px;
+  margin-top: 50px;
+  /* border: 1px solid red; */
+}
+
+.info-title h2 {
+  color: #222;
+  font-family: "Rubik Bold";
+  font-size: 34px;
+}
+
+.info-title span {
+  color: #333;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.info-title span a {
+  color: #ff8800;
+  font-weight: bold;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.info-title span a:hover {
+  color: #333;
+}
+
+/* .btn {
+  padding: 15px 30px;
+  background-color: #ff8800;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  transition: all 200ms;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #222;
+} */
+
+.header {
+  background-image: url("../img/backgroud.png") !important;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.navegate {
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0px 0px 8px #ff8800;
+  padding-top: 10px;
+  padding-bottom: 4px;
+  background-color: #fffffff5;
+}
+
+.navegate .logo {
+  width: 60px;
+}
+
+.navegate .logo img {
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  /* border: 1px solid red; */
+}
+
+.nav ul li {
+  padding: 5px 15px;
+  list-style: none;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 3px 15px;
+}
+
+.nav ul li a:hover {
+  border-bottom: 3px solid #ff8800;
+}
+
+/* HEADER  */
+
+.explora {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 100px;
+  margin-left: 70px;
+  height: 95vh;
+}
+
+.explora h1 {
+  font-size: 72px;
+  letter-spacing: 4px;
+  color: #fff;
+  margin-top: -100px;
+  margin-bottom: 50px;
+}
+
+.content {
+  width: 100%;
+  margin: 0px auto;
+}
+
+/* DESCRIPCION GENERAL */
+
+.description {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* margin: 0px 40px; */
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+.emblema {
+  width: 30%;
+  /* border: 1px solid red; */
+}
+
+.emblema img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.info-content {
+  width: 35%;
+  /* border: 1px solid red; */
+  margin-left: -20px;
+}
+
+.info-content h2 {
+  font-family: "Rubik";
+  font-size: 42px;
+  color: #222;
+  /* line-height: 30px; */
+}
+
+.info-content p {
+  font-size: 18px;
+  color: #777;
+  margin-top: 20px;
+  margin-bottom: 35px;
+  /* line-height: 30px; */
+}
+
+.info-content .enlaces-ico {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.info-content .enlaces-ico a {
+  flex-basis: 40%;
+  flex-grow: 1;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #222;
+  font-family: "Rubik Bold";
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.info-content .enlaces-ico a:hover {
+  color: #ff8800;
+}
+
+/* NOTICIAS  */
+.noticias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  margin: 0px auto;
+  margin-top: 70px;
+  margin-bottom: 120px;
+  /* border: 1px solid red; */
+}
+
+.noticias p {
+  font-size: 24px;
+  font-style: italic;
+  margin-bottom: 30px;
+  text-align: center;
+}
+/* TOURES */
+
+.tours {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0px 40px;
+}
+
+.tours article {
+  flex-basis: 30%;
+  flex-grow: 1;
+  /* width: 30%; */
+  height: 400px;
+  margin-top: 40px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-bottom: 40px;
+  box-shadow: 0px 5px 15px #ddd;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.tours article p {
+  font-size: 13px;
+  margin-left: 15px;
+  margin-top: 3px;
+}
+
+.tours .image-tour {
+  width: 100%;
+  height: 80%;
+}
+
+.tours .image-tour img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+
+.tours article h3 {
+  margin-top: 10px;
+  margin-left: 15px;
+  color: #222;
+  font-size: 18px;
+  font-family: "Rubik Bold";
+}
+
+.tours article span {
+  display: block;
+  margin-top: 7px;
+  margin-left: 15px;
+  color: #222;
+  font-size: 14px;
+}
+
+/* GALERIA */
+
+.gallery {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.gallery .col {
+  width: 28%;
+}
+
+.gallery .col .box1 {
+  width: 100%;
+  height: 450px;
+  /* border: 1px solid red; */
+  border-radius: 12px;
+  margin-bottom: 30px;
+
+  overflow: hidden;
+  object-fit: cover;
+  box-shadow: 0px 5px 15px #ddd;
+  border: 1px solid #ddd;
+}
+
+.gallery .col .box2 {
+  width: 100%;
+  height: 350px;
+  border: 1px solid red;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  object-fit: cover;
+  box-shadow: 0px 5px 15px #ddd;
+  border: 1px solid #ddd;
+}
+
+.gallery img {
+  /* width: 120%; */
+  /* transition: all 500ms; */
+  width: auto;
+  height: 100%;
+}
+
+/* INSCRIPCION */
+
+.incription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.incription form label {
+  display: block;
+  font-weight: bold;
+  font-size: 34px;
+  margin-bottom: 25px;
+  /* letter-spacing: 2px; */
+}
+
+.incription form input[type="text"] {
+  width: 300px;
+  height: 40px;
+  padding: 15px 25px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 2px #ddd;
+}
+
+.incription form input[type="submit"] {
+  width: 100px;
+  height: 70px;
+  padding: 15px 25px;
+  margin-left: -4px;
+  border: 1px solid #00a8ff;
+  background-color: #00a8ff;
+  color: white;
+  border-start-end-radius: 12px;
+  border-end-end-radius: 12px;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #ddd;
+}
+
+.foot1,
+.foot2,
+.foot3,
+.foot4 {
+  width: 20%;
+  padding: 15px;
+  /* border: 1px solid red; */
+}
+
+.foot1 .logo {
+  width: 150px;
+}
+
+.foot1 .logo img {
+  width: 100%;
+}
+
+.foot1 p {
+  font-size: 16px;
+  color: #333;
+}
+
+.foot2 h3,
+.foot3 h3,
+.foot4 h3 {
+  margin-bottom: 15px;
+}
+
+.foot2 ul li,
+.foot3 ul li,
+.foot4 ul li {
+  list-style: none;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.foot2 ul li a,
+.foot3 ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 17px;
+}
+
+.foot2 ul li a:hover,
+.foot3 ul li a:hover {
+  color: #ff8800;
+}
+
+.foot4 ul li {
+  color: #333;
+  font-size: 17px;
+}
+
+.autor {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.autor a {
+  text-decoration: none;
+  color: #ff8800;
+  font-size: 18px;
+}
+
+.autor a:hover {
+  text-decoration: none;
+  color: #333;
+}
+
+.tours article .foo-arti {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 15px;
+  margin-right: 20px;
+  margin-top: 12px;
+}
+
+.tours article .foo-arti p {
+  font-size: 24px;
+  color: #ff8800;
+  font-weight: bold;
+}
+
+.text-link {
+  text-decoration: none;
+  color: #ff8800;
+  font-size: 15px;
+  transition: all 200ms;
+}
+
+.text-link:hover {
+  color: #333;
+}
+
+.menu-categorias {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid red; */
+  margin: 0px auto;
+  margin-top: 35px;
+}
+.menu-categorias .text-link {
+  margin-left: 15px;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.cash {
+  font-size: 20px !important;
+  color: #ff8800;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-right: 25px;
+  text-align: right;
+}
+
+/* estilos de toures */
+
+.jumbo {
+  width: 80%;
+  margin: 20px auto;
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.info-jumbo {
+  width: 40%;
+}
+
+.jumbo .mask {
+  box-shadow: 0px 0px 8px #333;
+}
+
+.info-jumbo h1 {
+  font-size: 32px;
+}
+
+.info-jumbo .descrip {
+  display: block;
+  font-family: "Montserrat";
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.info-jumbo .cash-tour {
+  color: #003149;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: "LeagueSpartan Bold";
+  margin-top: 20px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  text-align: right;
+}

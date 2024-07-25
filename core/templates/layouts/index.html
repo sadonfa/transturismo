@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/botones.css' %}" />
+
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %} %}" type="image/x-icon">
+
+    <title>Transturismo Cartagena | {% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <div class="navegate">
+      <div class="logo">
+        <img src="{% static 'img/logo.png' %} " alt="Logo Transturismo" />
+      </div>
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="{% url "home" %}"> Inicio </a>
+          </li>
+          <li>
+            <a href="{% url "tours" %}"> Tours </a>
+          </li>
+          <li>
+            <a href="#">Blog</a>
+          </li>
+          <li>
+            <a href="#">Botes</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="content">{% block content %} {% endblock %}</div>
+
+    <footer class="footer">
+      <div class="foot1">
+        <div class="logo">
+          <img src="{% static 'img/logo.png' %} " alt="Logo Transturismo" />
+        </div>
+        <p>
+          Descubra los lugares de interés de Cartagena. Su guía lo llevará a
+          lugares históricos en toda la ciudad amurallada.
+        </p>
+      </div>
+      <div class="foot2">
+        <h3>Enlaces Rapidos</h3>
+        <ul>
+          <li>
+            <a href="#">Inicio</a>
+          </li>
+          <li>
+            <a href="#">Toures</a>
+          </li>
+          <li>
+            <a href="#">Blog</a>
+          </li>
+          <li>
+            <a href="#">Botes</a>
+          </li>
+        </ul>
+      </div>
+      <div class="foot3">
+        <h3>Enlaces Rapidos</h3>
+        <ul>
+          <li>
+            <a href="#">FAQ's</a>
+          </li>
+          <li>
+            <a href="#">Politicas de privacidad</a>
+          </li>
+          <li>
+            <a href="#">Terminos y condiciones</a>
+          </li>
+          <li>
+            <a href="#">Soporte</a>
+          </li>
+        </ul>
+      </div>
+      <div class="foot4">
+        <h3>Contacto</h3>
+        <ul>
+          <li>Cra. 2 #6 - 40, Cartagena de Indias</li>
+          <li>+57 313 876 85 61</li>
+          <li>info@transturismocartagena.com.co</li>
+        </ul>
+      </div>
+    </footer>
+    <div class="autor">
+      Transturismo Cartagena | Creado por &copy;
+      <a href="gegova.com.co">gegova.com.co</a>
+    </div>
+  </body>
+</html>

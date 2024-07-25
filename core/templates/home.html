@@ -1,0 +1,166 @@
+{% extends "layouts/index.html" %} {% load static %}
+{% block title %} {{ title }} {% endblock %}
+{% load humanize %}
+{% block content %}
+
+<header class="header">
+  {% comment %} {/* HEADER */} {% endcomment %}
+  <div class="explora">
+    <div class="info-content">
+      <h1>Explora lo hermoso de Cartagena</h1>
+      <button class="btn">Contactanos</button>
+    </div>
+  </div>
+</header>
+
+{% comment %} {/* CONTENT */} {/* DESTACADOS */} {% endcomment %}
+
+<div class="info-title">
+  <div class="cont">
+    <h2>Lugares Populares</h2>
+  </div>
+  <span>
+    <a href="{% url 'tours' %}"> Ver todo </a>
+  </span>
+</div>
+
+<div class="tours">
+  {% for lugar in lugares %}
+  <article>
+    <div class="image-tour">
+      <img src="{{lugar.image1.url}}" alt="{{lugar.title}}" />
+    </div>
+    <h3>{{lugar.title}}</h3>
+    <p>{{lugar.description}}</p>
+    <div class="foo-arti">
+      <a href="" class="text-link"> ver mas ... </a>
+      <p>$ {{lugar.cash|intcomma}} COP</p>
+    </div>
+  </article>
+
+  {% endfor %} 
+</div>
+
+{% comment %} {/* DESCRIPTION */} {% endcomment %}
+
+<div class="description">
+  <div class="emblema">
+    <img src="{% static 'img/tourhistorico.png' %}" alt="Cartagena de Indias" />
+  </div>
+  <div class="info-content">
+    <h2>Cartagena Inspira</h2>
+    <p>
+      Descubra los lugares de interés de Cartagena. Su guía lo llevará a lugares
+      históricos en toda la ciudad amurallada.
+    </p>
+    <div class="enlaces-ico">
+      <a href="#">Playas</a>
+      <a href="#"> Islas Privadas </a>
+      <a href="#">Transportes</a>
+      <a href="#">CityTours Históricos</a>
+    </div>
+  </div>
+</div>
+
+{% comment %} {/* TOURS */} {% endcomment %}
+
+<div class="info-title">
+  <div class="cont">
+    <h2>Explorar Lugares</h2>
+  </div>
+  <span>
+    <a href="{% url 'tours' %}"> Ver todo </a>
+  </span>
+</div>
+
+
+  <section class="tours">
+    {% for tour in tours %}
+    <article>
+      <div class="image-tour">
+        <img src=" {{ tour.image1.url }}" alt="Bora Bora" />
+      </div>
+      <h3>{{tour.title}}</h3>
+      <p>{{tour.description}}</p>
+      <div class="foo-arti">
+        <a href="" class="text-link"> ver mas ... </a>
+        <p>$ {{tour.cash|intcomma}} COP</p>
+      </div>
+    </article>
+    {% endfor %}
+  </section>
+
+  <div class="info-title">
+    <div class="cont">
+      <h2>Blog</h2>
+      <span>- Mira todo lo relacionado con tus vacaciones</span>
+    </div>
+
+    <span>
+      <a href="#">Ver todo</a>
+    </span>
+  </div>
+
+  <div class="noticias">
+    <p>
+      Estamos comprometidos con la protección a niños, niñas y adolescentes de
+      nuestro país! De acuerdo con la ley 679/2001, 1336/2009 y la resolución
+      2064 de 2010, rechazamos la explotación sexual y demás formas de abuso a
+      niños, niñas y adolescentes de cualquier actividad que atente contra el
+      patrimonio cultural y el tráfico ilegal de flora y fauna, advertimos que
+      estas prácticas son sancionadas penal y administrativamente conforme a las
+      disposiciones legales vigentes
+    </p>
+    <button class="btn">Leer mas ...</button>
+  </div>
+
+  {% comment %} GALLERY {% endcomment %}
+  <div class="info-title">
+    <div class="cont">
+      <h2>Nuestra Galeria</h2>
+      <span>- Logares emblematicos de Cartagena</span>
+    </div>
+
+    <span>
+      <a hred="#">Ver todo</a>
+    </span>
+  </div>
+  <div class="gallery">
+    <div class="col">
+      <div class="box1">
+        <img src="{% static 'img/gallery/1.png' %} " alt="Imagen 1" />
+      </div>
+      <div class="box2">
+        <img src="{% static 'img/gallery/image2.png' %} " alt="Imagen 2" />
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="box2">
+        <img src="{% static 'img/gallery/3.png' %} " alt="Imagen 2" />
+      </div>
+      <div class="box1">
+        <img src="{% static 'img/gallery/4.png' %} " alt="Imagen 1" />
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="box1">
+        <img src="{% static 'img/gallery/5.png' %} " alt="Imagen 1" />
+      </div>
+      <div class="box2">
+        <img src="{% static 'img/gallery/image1.png' %}" alt="Imagen 2" />
+      </div>
+    </div>
+  </div>
+
+  <div class="incription">
+    <form action="">
+      <label for="">Suscribete a nuestro boletin</label>
+      <input type="text" placeholder="Ingrese su email" />
+      <input type="submit" value="Enviar" />
+    </form>
+  </div>
+
+  {% endblock %}
+</div>

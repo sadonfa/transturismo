@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik/Rubik-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Rubik Bold";
+  src: url("../fonts/Rubik/Rubik-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat Italic";
+  src: url("../fonts/Montserrat/Montserrat-Italic.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat Light";
+  src: url("../fonts/Montserrat/Montserrat-Light.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat SemiBold";
+  src: url("../fonts/Montserrat/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Adumu";
+  src: url("../fonts/adumu/Adumu.ttf");
+}
+
+@font-face {
+  font-family: "LeagueSpartan Bold";
+  src: url("../fonts/League_Spartan/static/LeagueSpartan-Bold.ttf");
+}
