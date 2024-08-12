@@ -62,10 +62,10 @@
         <h3>Enlaces Rapidos</h3>
         <ul>
           <li>
-            <a href="#">Inicio</a>
+            <a href="{% url 'home' %}">Inicio</a>
           </li>
           <li>
-            <a href="#">Toures</a>
+            <a href="{% url 'tours' %}">Toures</a>
           </li>
           <li>
             <a href="#">Blog</a>
@@ -77,16 +77,17 @@
       </div>
       <div class="foot3">
         <h3>Enlaces Rapidos</h3>
+        {% load pages_extras %}
+        {% get_page_list as page_list %}
         <ul>
           <li>
             <a href="#">FAQ's</a>
           </li>
-          <li>
-            <a href="#">Politicas de privacidad</a>
-          </li>
-          <li>
-            <a href="#">Terminos y condiciones</a>
-          </li>
+          {% for page  in page_list %}
+            <li>
+              <a href="{% url 'page' page.id page.title|slugify %}" class="link">{{ page.title }}</a>
+            </li>
+          {% endfor %}
           <li>
             <a href="#">Soporte</a>
           </li>

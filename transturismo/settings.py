@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django_ckeditor_5',
     'core',
     'tours',
-    'transfers'
+    'transfers',
+    'pages.apps.PagesConfig'
 ]
 
 MIDDLEWARE = [

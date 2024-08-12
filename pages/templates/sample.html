@@ -1,0 +1,15 @@
+{% extends "layouts/index.html" %}
+{% block title %}
+    Sample
+{% endblock title %}
+{% block content %}
+    <div class="leg-page">
+        <h2>{{ page.title }}</h2>
+        <div class="section-content">
+            <p>{{ page.content|safe }}</p>
+            {% if user.is_authenticated %}
+                <a href="{% url 'admin:pages_page_change' page.id %}">Editar</a>
+            {% endif %}
+        </div>
+    </div>
+{% endblock content %}
