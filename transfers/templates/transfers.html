@@ -1,6 +1,73 @@
-{% extends 'layouts/index.html' %} {% block title %} {{ title }} {% endblock %}
+{% extends 'layouts/index.html' %}
+{% block title %}{{ title }}{% endblock %}
+{% load static %}
 {% block content %}
-<div class="jumbo">
+  <div class="content">
+    {% comment %}
   <h1>{{ title }}</h1>
-</div>
+    {% endcomment %}
+    <div class="translate">
+      {% for vehiculo in vehiculos %}
+        {% if vehiculo.id|divisibleby:2 == False %}
+          <article class="vehiculo">
+            <div class="mask">
+              <div class="galeria-v">
+                <div class="col">
+                  <div class="box1">
+                    <img src="{{ vehiculo.image.url }}" alt="{{ vehiculo.name }}" />
+                  </div>
+                  <div class="box2">
+                    <img src="{{ vehiculo.image1.url }}" alt="{{ vehiculo.name }} " />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="box2">
+                    <img src="{{ vehiculo.image2.url }}" alt="{{ vehiculo.name }}" />
+                  </div>
+                  <div class="box1">
+                    <img src="{{ vehiculo.image3.url }}" alt="{{ vehiculo.name }}" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="info-trans">
+              <h3>{{ vehiculo.name }}</h3>
+              <p>{{ vehiculo.description|safe }}</p>
+              <button class="btn-blue">Cotizacion</button>
+            </div>
+          </article>
+          <hr class="separador-v">
+        {% else %}
+          <article class="vehiculo">
+            <div class="info-trans-l">
+              <h3>{{ vehiculo.name }}</h3>
+              <p>{{ vehiculo.description|safe }}</p>
+              <button class="btn-blue">Cotizacion</button>
+            </div>
+            <div class="mask">
+              <div class="galeria-v">
+                <div class="col">
+                  <div class="box1">
+                    <img src="{{ vehiculo.image.url }}" alt="{{ vehiculo.name }}" />
+                  </div>
+                  <div class="box2">
+                    <img src="{{ vehiculo.image1.url }}" alt="{{ vehiculo.name }} " />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="box2">
+                    <img src="{{ vehiculo.image2.url }}" alt="{{ vehiculo.name }}" />
+                  </div>
+                  <div class="box1">
+                    <img src="{{ vehiculo.image3.url }}" alt="{{ vehiculo.name }}" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          {% if not forloop.last %}<hr class="separador-v">{% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
 {% endblock %}

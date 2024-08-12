@@ -4,14 +4,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'css/fonts.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/translate.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/tours.css' %}" />
     <link rel="stylesheet" href="{% static 'css/botones.css' %}" />
-
-    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %} %}" type="image/x-icon">
-
-    <title>Transturismo Cartagena | {% block title %}{% endblock %}</title>
+    <link rel="shortcut icon"
+          href="{% static 'img/favicon.ico' %}"
+          type="image/x-icon">
+    <title>Transturismo Cartagena |
+      {% block title %}
+      {% endblock title %}
+    </title>
   </head>
   <body>
     <div class="navegate">
@@ -21,31 +25,31 @@
       <nav class="nav">
         <ul>
           <li>
-            <a href="{% url "home" %}"> Inicio </a>
+            <a href="{% url 'home' %}"
+               class="{% if request.path == '/inicio/' %}active{% endif %}">Inicio</a>
           </li>
           <li>
-            <a href="{% url 'transfers' %}">Traslados</a>
+            <a href="{% url 'transfers' %}"
+               class="{% if request.path == '/transporte/' %}active{% endif %}">Traslados</a>
           </li>
           <li>
-            <a href="{% url "tours" %}"> Tours </a>
+            <a href="{% url 'tours' %}"
+               class="{% if request.path|slice:':7' == '/tours/' %}active{% endif %}">Tours</a>
           </li>
-         
           <li>
             <a href="#">Botes Deportivos</a>
           </li>
           <li>
             <a href="#">Decoraciones</a>
           </li>
-          <li>
-            
-          </li>
+          <li></li>
         </ul>
-        <a href="https://wa.link/u1462m" target='_blank' class="btn" >Cotizar</a>
       </nav>
-     
+      <a href="https://wa.link/u1462m" target='_blank' class="btn">Cotizar</a>
     </div>
-    <div class="content">{% block content %} {% endblock %}</div>
-
+    <div class="content">
+      {% block content %}{% endblock %}
+    </div>
     <footer class="footer">
       <div class="foot1">
         <div class="logo">
@@ -103,5 +107,6 @@
       Transturismo Cartagena | Creado por &copy;
       <a href="gegova.com.co">gegova.com.co</a>
     </div>
+    <script src="{% static 'js/script.js' %}"></script>
   </body>
 </html>

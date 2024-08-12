@@ -1,106 +1,102 @@
-{% extends "layouts/index.html" %} {% load static %}
-{% block title %} {{ title }} {% endblock %}
+{% extends "layouts/home.html" %}
+{% load static %}
+{% block title %}{{ title }}{% endblock %}
 {% load humanize %}
 {% block content %}
-
-<header class="header">
-  {% comment %} {/* HEADER */} {% endcomment %}
-  <div class="explora">
+  <header class="header">
+    {% comment %} {/* HEADER */} {% endcomment %}
+    <div class="explora">
+      <div class="info-content">
+        <h1>
+          Explora lo <span>hermoso de</span>  Cartagena
+        </h1>
+        <p>Un lugar mágico que no te puede faltar por visitar.</p>
+        <a href="https://wa.link/u1462m" target="_blank" class="btn">Contactanos</a>
+      </div>
+    </div>
+  </header>
+  {% comment %} {/* CONTENT */} {/* DESTACADOS */} {% endcomment %}
+  <div class="info-title">
+    <div class="cont">
+      <h2>Lugares Populares</h2>
+    </div>
+    <span>
+      <a href="{% url 'tours' %}">Ver todo</a>
+    </span>
+  </div>
+  <div class="tours">
+    {% for lugar in lugares %}
+      <article>
+        <div class="image-tour">
+          <img src="{{ lugar.image1.url }}" alt="{{ lugar.title }}" />
+        </div>
+        <h3>{{ lugar.title }}</h3>
+        <p>{{ lugar.description|slice:":100" }} ...</p>
+        <div class="foo-arti">
+          <p>$ {{ lugar.cash|intcomma }} COP</p>
+          <button class="btn">Reservar</button>
+        </div>
+        <div class="enlace-reserva">
+          <a href="{% url 'tour' lugar.id %}" class="text-link">Mas detalles</a>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+  {% comment %} {/* DESCRIPTION */} {% endcomment %}
+  <div class="description">
+    <div class="emblema">
+      <img src="{% static 'img/tourhistorico.png' %}" alt="Cartagena de Indias" />
+    </div>
     <div class="info-content">
-      <h1>Explora lo hermoso de Cartagena</h1>
-      <a href="https://wa.link/u1462m" target="_blank" class="btn">Contactanos</a>
+      <h2>Cartagena Inspira</h2>
+      <p>
+        Descubra los lugares de interés de Cartagena. Su guía lo llevará a lugares
+        históricos en toda la ciudad amurallada.
+      </p>
+      <div class="enlaces-ico">
+        <a href="{% url 'category' 1 %}">Playas</a>
+        <a href="{% url 'category' 2 %}">Islas Privadas</a>
+        <a href="{% url 'transfers' %}">Transportes</a>
+        <a href="{% url 'category' 4 %}">CityTours Históricos</a>
+      </div>
     </div>
   </div>
-</header>
-
-{% comment %} {/* CONTENT */} {/* DESTACADOS */} {% endcomment %}
-
-<div class="info-title">
-  <div class="cont">
-    <h2>Lugares Populares</h2>
-  </div>
-  <span>
-    <a href="{% url 'tours' %}"> Ver todo </a>
-  </span>
-</div>
-
-<div class="tours">
-  {% for lugar in lugares %}
-  <article>
-    <div class="image-tour">
-      <img src="{{lugar.image1.url}}" alt="{{lugar.title}}" />
+  {% comment %} {/* TOURS */} {% endcomment %}
+  <div class="info-title">
+    <div class="cont">
+      <h2>Explorar Lugares</h2>
     </div>
-    <h3>{{lugar.title}}</h3>
-    <p>{{lugar.description}}</p>
-    <div class="foo-arti">
-      <a href="" class="text-link"> ver mas ... </a>
-      <p>$ {{lugar.cash|intcomma}} COP</p>
-    </div>
-  </article>
-
-  {% endfor %} 
-</div>
-
-{% comment %} {/* DESCRIPTION */} {% endcomment %}
-
-<div class="description">
-  <div class="emblema">
-    <img src="{% static 'img/tourhistorico.png' %}" alt="Cartagena de Indias" />
+    <span>
+      <a href="{% url 'tours' %}">Ver todo</a>
+    </span>
   </div>
-  <div class="info-content">
-    <h2>Cartagena Inspira</h2>
-    <p>
-      Descubra los lugares de interés de Cartagena. Su guía lo llevará a lugares
-      históricos en toda la ciudad amurallada.
-    </p>
-    <div class="enlaces-ico">
-      <a href="{% url "tours" %}">Playas</a>
-      <a href="{% url "tours" %}"> Islas Privadas </a>
-      <a href="{% url "tours" %}">Transportes</a>
-      <a href="{% url "tours" %}">CityTours Históricos</a>
-    </div>
-  </div>
-</div>
-
-{% comment %} {/* TOURS */} {% endcomment %}
-
-<div class="info-title">
-  <div class="cont">
-    <h2>Explorar Lugares</h2>
-  </div>
-  <span>
-    <a href="{% url 'tours' %}"> Ver todo </a>
-  </span>
-</div>
-
-
   <section class="tours">
     {% for tour in tours %}
-    <article>
-      <div class="image-tour">
-        <img src=" {{ tour.image1.url }}" alt="Bora Bora" />
-      </div>
-      <h3>{{tour.title}}</h3>
-      <p>{{tour.description}}</p>
-      <div class="foo-arti">
-        <a href="" class="text-link"> ver mas ... </a>
-        <p>$ {{tour.cash|intcomma}} COP</p>
-      </div>
-    </article>
+      <article>
+        <div class="image-tour">
+          <img src=" {{ tour.image1.url }}" alt="Bora Bora" />
+        </div>
+        <h3>{{ tour.title }}</h3>
+        <p>{{ tour.description|slice:":100" }}</p>
+        <div class="foo-arti">
+          <p>$ {{ tour.cash|intcomma }} COP</p>
+          <button class="btn">Reservar</button>
+        </div>
+        <div class="enlace-reserva">
+          <a href="{% url 'tour' tour.id %}" class="text-link">Mas detalles</a>
+        </div>
+      </article>
     {% endfor %}
   </section>
-
   <div class="info-title">
     <div class="cont">
       <h2>Blog</h2>
       <span>- Mira todo lo relacionado con tus vacaciones</span>
     </div>
-
     <span>
       <a href="#">Ver todo</a>
     </span>
   </div>
-
   <div class="noticias">
     <p>
       Estamos comprometidos con la protección a niños, niñas y adolescentes de
@@ -113,14 +109,12 @@
     </p>
     <button class="btn">Leer mas ...</button>
   </div>
-
   {% comment %} GALLERY {% endcomment %}
   <div class="info-title">
     <div class="cont">
       <h2>Nuestra Galeria</h2>
       <span>- Logares emblematicos de Cartagena</span>
     </div>
-
     <span>
       <a hred="#">Ver todo</a>
     </span>
@@ -134,7 +128,6 @@
         <img src="{% static 'img/gallery/image2.png' %} " alt="Imagen 2" />
       </div>
     </div>
-
     <div class="col">
       <div class="box2">
         <img src="{% static 'img/gallery/3.png' %} " alt="Imagen 2" />
@@ -143,7 +136,6 @@
         <img src="{% static 'img/gallery/4.png' %} " alt="Imagen 1" />
       </div>
     </div>
-
     <div class="col">
       <div class="box1">
         <img src="{% static 'img/gallery/5.png' %} " alt="Imagen 1" />
@@ -153,7 +145,6 @@
       </div>
     </div>
   </div>
-
   <div class="incription">
     <form action="">
       <label for="">Suscribete a nuestro boletin</label>
@@ -161,6 +152,5 @@
       <input type="submit" value="Enviar" />
     </form>
   </div>
-
-  {% endblock %}
+{% endblock %}
 </div>

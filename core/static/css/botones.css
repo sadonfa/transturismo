@@ -1,6 +1,8 @@
 .btn {
   display: flex;
+  width: 120px;
   align-items: center;
+  justify-content: center;
   background: linear-gradient(orange, #cb7a00);
   color: #fff;
   font-size: 14px;
