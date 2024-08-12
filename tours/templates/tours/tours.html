@@ -27,7 +27,7 @@
           <button class="btn">Reservar</button>
         </div>
         <div class="enlace-reserva">
-          <a href="{% url 'tour' tour.id %}" class="text-link">Mas detalles</a>
+          <a href="{% url 'tour' tour.id tour.title|slugify %}" class="text-link">Mas detalles</a>
         </div>
       </article>
     {% endfor %}

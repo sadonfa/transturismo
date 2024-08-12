@@ -9,7 +9,7 @@ def tours(request):
         'tours': tours
     })
 
-def tour(request, id):
+def tour(request, id, tour_slug):
     tour = Tours.objects.get(id=id)
     return render(request, "tours/tour.html", {
         'title': 'Tour',
