@@ -80,9 +80,6 @@
         {% load pages_extras %}
         {% get_page_list as page_list %}
         <ul>
-          <li>
-            <a href="#">FAQ's</a>
-          </li>
           {% for page  in page_list %}
             <li>
               <a href="{% url 'page' page.id page.title|slugify %}" class="link">{{ page.title }}</a>
@@ -98,7 +95,7 @@
         <ul>
           <li>Cra. 2 #6 - 40, Cartagena de Indias</li>
           <li>+57 313 876 85 61</li>
-          <li>info@transturismocartagena.com.co</li>
+          <li>transturismocartagena@gmail.com</li>
         </ul>
       </div>
     </footer>

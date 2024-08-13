@@ -21,7 +21,7 @@
 }
 
 .vehiculo .info-trans {
-  width: 30%;
+  width: 40%;
   margin-right: 80px;
   /* border: 1px solid yellowgreen; */
   display: flex;
@@ -63,19 +63,19 @@
 
 .vehiculo .info-trans-l p,
 .vehiculo .info-trans p {
-  width: 70%;
-  margin-top: 25px;
-  margin-bottom: 30px;
-  margin-right: 35px;
-  text-align: right;
+  width: 90%;
+  margin-top: 10px;
+  /* margin-bottom: 30px; */
+  margin-right: 20px;
+  text-align: justify;
   font-family: "Montserrat";
-  font-size: 19px;
+  font-size: 15px;
   /* box-shadow: 0px 0px 8px #444; */
   /* border: 1px solid red; */
 }
 
 .vehiculo .info-trans-l p {
-  text-align: left;
+  text-align: justify;
   margin-left: 35px;
 }
 
@@ -83,6 +83,7 @@
 .vehiculo .info-trans .btn-blue {
   margin-right: 35px;
   margin-left: 35px;
+  margin-top: 10px;
 }
 
 .separador-v {
