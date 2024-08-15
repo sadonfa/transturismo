@@ -62,7 +62,7 @@ body {
 } */
 
 .header {
-  background-image: url("../img/backgroud.png") !important;
+  background-image: url("../img/background_h.png") !important;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -91,7 +91,7 @@ body {
 
 .navegate-h .logo,
 .navegate .logo {
-  width: 60px;
+  width: 80px;
   /* margin-left: 50px; */
 }
 

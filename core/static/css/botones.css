@@ -63,3 +63,24 @@
   justify-content: space-around;
   margin-top: 35px;
 }
+
+.btn-sw {
+  display: flex;
+  width: 120px;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  background: #ff8800;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: 3px 3px 10px #ccc;
+  border: 1px solid #ff8800;
+  border-radius: 10px;
+}
+
+.btn-sw:hover {
+  cursor: pointer;
+  background-color: #cb7a00;
+  color: #fff;
+  transition: all 250ms;
+}

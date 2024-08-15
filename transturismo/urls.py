@@ -24,6 +24,7 @@ urlpatterns = [
     path('', include('tours.urls')),
     path('', include('transfers.urls')),
     path('', include('pages.urls')),
+    path('', include('booking.urls')),
     path("ckeditor5/", include('django_ckeditor_5.urls')),
 ] 
 

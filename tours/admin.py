@@ -5,7 +5,7 @@ from .models import Tours, Category, Include, Exclude
 
 class ToursAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at', 'update_at')
-    list_display = ('title', 'created_at')
+    list_display = ('title', 'order', 'created_at')
 
 class CategoriesAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at', 'update_at')

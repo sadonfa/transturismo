@@ -16,5 +16,9 @@ class Transfers(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Creado el")
     update_at = models.DateTimeField(auto_now=True, verbose_name="Editado el")
 
+    class Meta:
+        verbose_name="Transporte"
+        verbose_name_plural="Transportes"
+
     def __str__(self):
         return f'{self.name}' 

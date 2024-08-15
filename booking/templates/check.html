@@ -1,0 +1,88 @@
+{% extends "layouts/index.html" %}
+{% block title %}
+  {{ title }}
+{% endblock title %}
+{% load humanize %}
+{% block content %}
+  <div class="content-form">
+    <div class="barra">.</div>
+    <form class="form-booking"
+          action="{% url 'detail_booking' %}"
+          method="post">
+      {% csrf_token %}
+      <h3 class="title-form">Detalle Basico</h3>
+      <div class="box-form-booking">
+        <div class="box-form-item">
+          <label class="sub-title-3">nombres</label>
+          <input type="text" name="name" placeholder="nombres" />
+        </div>
+        <div class="box-form-item">
+          <label class="sub-title-3">apellidos</label>
+          <input type="text" name="lastname" placeholder="apellidos" />
+        </div>
+      </div>
+      <div class="box-form-booking">
+        <div class="box-form-item">
+          <label class="sub-title-3" for="">telefono</label>
+          <input id="phone" type="tel" name="phone" placeholder="telefono" />
+        </div>
+        <div class="box-form-item">
+          <label class="sub-title-3">correo</label>
+          <input type="email" name="mail" placeholder="correo" />
+        </div>
+      </div>
+      <div class="box-form-booking">
+        <div class="box-form-item">
+          <label class="sub-title-3">Nacionalidad</label>
+          <input type="text" name="contry" placeholder="Nacionalidad" />
+        </div>
+        <div class="box-form-item">
+          <label>ciudad de origen</label>
+          <input type="text" placeholder="ciudad de origen" name="city" />
+        </div>
+      </div>
+      <div class="box-form-booking">
+        <div class="box-form-item">
+          <label for="hotel">hotel</label>
+          <input type="text" name="hotel" placeholder="hotel" />
+        </div>
+        <div class="box-form-item">
+          <label for="hotel">Adultos</label>
+          <select name="adult" id="">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="box-form-item">
+          <label for="hotel">niños</label>
+          <select name="childre" id="">
+            <option value="0">-</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+      <div class="box-form-booking">
+        <div class="box-form-item">
+          <label class="sub-title-3">Tour</label>
+          <input type="text" name="tour" value="{{ tour.title }}" readonly />
+        </div>
+        <div class="box-form-item">
+          <label class="sub-title-3">valor Por persona</label>
+          <input type="text" value="$ {{ tour.cash|intcomma }} COP" readonly />
+          <input type="hidden" name="cash" value=" {{ tour.cash }} " />
+        </div>
+      </div>
+      <div class="foo-form">
+        <a href="#">regreso</a>
+        <input type="submit" class="btn-sw" value="Continuar" />
+      </div>
+    </form>
+  </div>
+{% endblock content %}

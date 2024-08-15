@@ -39,9 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_ckeditor_5',
+    'booking.apps.BookingConfig',
     'core',
     'tours',
-    'transfers',
+    'transfers.apps.TransfersConfig',
     'pages.apps.PagesConfig'
 ]
 

@@ -5,7 +5,6 @@
   <article class="tour">
     <div class="info-tou">
       <h3>{{ tour.title }}</h3>
-      <p>{{ tour.description|safe }}</p>
       <div class="i-tour">
         <div class="include">
           <h4>Incluye</h4>
@@ -30,7 +29,8 @@
       </ul>
       <div class="foot-t">
         <span class="cash-tour">$ {{ tour.cash|intcomma }} COP</span>
-        <button class="btn">Reservar</button>
+        <a href="{% url 'check' tour.id %}" class="btn">Reservar</a>
+        {% comment %} <button class="btn">Reservar</button> {% endcomment %}
       </div>
     </div>
     <div class="mask">
@@ -40,15 +40,15 @@
             <img src="{{ tour.image1.url }}" alt="{{ tour.name }}" />
           </div>
           <div class="box2">
-            <img src="{{ tour.image1.url }}" alt="{{ tour.name }} " />
+            <img src="{{ tour.image2.url }}" alt="{{ tour.name }} " />
           </div>
         </div>
         <div class="col">
           <div class="box2">
-            <img src="{{ tour.image1.url }}" alt="{{ tour.name }}" />
+            <img src="{{ tour.image3.url }}" alt="{{ tour.name }}" />
           </div>
           <div class="box1">
-            <img src="{{ tour.image1.url }}" alt="{{ tour.name }}" />
+            <img src="{{ tour.image4.url }}" alt="{{ tour.name }}" />
           </div>
         </div>
       </div>
