@@ -141,6 +141,7 @@
   .description .info-content {
     width: 80%;
     text-align: justify;
+    margin-top: 25px;
   }
 
   .description .info-content h2 {
@@ -214,6 +215,83 @@
   }
   .autor a,
   .autor {
+    font-size: 10px;
+  }
+
+  .tour .info-tou {
+    order: 2;
+    width: 90%;
+    margin: 0px auto;
+  }
+  .tour {
+    flex-direction: column;
+  }
+  .tour .mask {
+    width: 110%;
+  }
+  .tour .i-tour {
+    margin-top: 25px;
+  }
+  .tour .foot-t {
+    margin-left: 0px;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .tour .info-tou .btn {
+    margin-left: 0px;
+    margin-top: 25px;
+  }
+  .galeria-v .col .box2,
+  .galeria-v .col .box1 {
+    margin-bottom: 3px;
+  }
+
+  .vehiculo {
+    flex-direction: column;
+  }
+  .vehiculo .mask {
+    width: 105%;
+  }
+  .vehiculo .info-trans-l {
+    order: 2;
+  }
+
+  .vehiculo .info-trans,
+  .vehiculo .info-trans-l {
+    width: 100%;
+    margin-left: 0px;
+    align-items: center;
+  }
+
+  .vehiculo .info-trans-l p,
+  .vehiculo .info-trans p {
+    width: 90%;
+    margin: 0px auto;
+  }
+
+  .vehiculo .info-trans-l .btn-blue,
+  .vehiculo .info-trans .btn-blue {
+    margin-top: 30px;
+  }
+  .vehiculo .info-trans-l h3 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .explora .info-content h1 {
+    font-size: 35px;
+    line-height: 35px;
+  }
+  .tours article {
+    height: 430px;
+  }
+  .incription form input[type="text"] {
+    width: 60%;
+  }
+  .info-title span {
     font-size: 10px;
   }
 }
