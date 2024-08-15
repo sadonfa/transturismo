@@ -278,6 +278,12 @@
   .vehiculo .info-trans-l h3 {
     text-align: center;
   }
+  .vehiculo .info-trans-l h3,
+  .vehiculo .info-trans h3 {
+    margin-left: 0px;
+    margin-top: 50px;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 400px) {
