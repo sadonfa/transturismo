@@ -3,14 +3,24 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <meta name="keywords" content="foo,bar" />
+    <meta name="description" content="foo" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'css/fonts.css' %}" />
     <link rel="stylesheet" href="{% static 'css/translate.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/tours.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/pages.css' %}" />
     <link rel="stylesheet" href="{% static 'css/botones.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/booking.css' %}" />
+    <!-- Estilos Responsive -->
+    <link rel="stylesheet"
+          type="text/css"
+          href="{% static 'css/responsive.css' %}" />
     <link rel="shortcut icon"
           href="{% static 'img/favicon.ico' %}"
           type="image/x-icon">
+    <script type="text/javascript" src="https://checkout.wompi.co/widget.js"></script>
     <title>Transturismo Cartagena |
       {% block title %}{% endblock %}
     </title>

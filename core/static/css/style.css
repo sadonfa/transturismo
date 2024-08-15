@@ -263,7 +263,7 @@ body {
 }
 
 .noticias p {
-  font-size: 24px;
+  font-size: 15px;
   font-style: italic;
   margin-bottom: 30px;
   text-align: center;
@@ -489,12 +489,13 @@ body {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  font-size: 13px;
 }
 
 .autor a {
   text-decoration: none;
   color: #ff8800;
-  font-size: 18px;
+  font-size: 13px;
 }
 
 .autor a:hover {
