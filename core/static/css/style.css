@@ -137,6 +137,41 @@ body {
   color: #ff8800;
 }
 
+.main-nav {
+  margin-right: 20px;
+}
+
+.button-menu {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.link-item {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 15px;
+  /* padding: 3px 10px; */
+  transition: all 200ms;
+  position: relative;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.link-item:hover {
+  /* margin-top: 2rem; */
+  color: #ff8800;
+  font-weight: bold;
+}
+.active {
+  color: #ff8800;
+}
+
 /* HEADER  */
 
 .explora {

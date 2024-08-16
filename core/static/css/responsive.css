@@ -106,6 +106,20 @@
 }
 
 @media screen and (max-width: 440px) {
+  .btn {
+    display: none;
+  }
+
+  .navegate-h,
+  .navegate {
+    justify-content: space-between;
+    height: 80px;
+  }
+
+  .navegate-h .logo,
+  .navegate .logo {
+    margin-left: 25px;
+  }
   .explora {
     width: 80%;
     height: 45vh;
@@ -283,6 +297,83 @@
     margin-left: 0px;
     margin-top: 50px;
     text-align: center;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    margin-left: -100%;
+    transition: all 0.2s linear;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .main-nav.show {
+    margin-left: 0;
+  }
+
+  .nav-links {
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .link-item {
+    margin-top: 2rem;
+    color: #444444;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+  }
+
+  .button-menu {
+    z-index: 200;
+    width: 40px;
+    height: 40px;
+    margin-right: 25px;
+    border: none;
+    display: flex;
+    background: none;
+    flex-direction: column; /* Pondrá un span debajo del otro*/
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  /* 
+    Dibujamos una línea recta por cada span creando el tipico menu hamburguesa
+  */
+
+  .button-menu span {
+    width: 37px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #ff8800;
+    border-radius: 3px;
+    transform-origin: 4px 0px;
+    transition: all 0.2s linear;
+  }
+
+  .button-menu.close span {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);
+    background: #ff8800;
+  }
+
+  .button-menu.close span:nth-child(2) {
+    transform: rotate(-45deg) translate(-8px, 5px);
+  }
+
+  .button-menu.close span:nth-child(3) {
+    display: none;
   }
 }
 

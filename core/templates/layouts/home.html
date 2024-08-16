@@ -30,29 +30,23 @@
       <div class="logo">
         <img src="{% static 'img/logo.png' %} " alt="Logo Transturismo" />
       </div>
-      <nav class="nav">
-        <ul>
-          <li>
-            <a href="{% url 'home' %}"
-               class="{% if request.path == '/inicio/' %}active{% endif %}">Inicio</a>
-          </li>
-          <li>
-            <a href="{% url 'transfers' %}"
-               class="{% if request.path == '/transporte/' %}active{% endif %}">Traslados</a>
-          </li>
-          <li>
-            <a href="{% url 'tours' %}"
-               class="{% if request.path|slice:':7' == '/tours/' %}active{% endif %}">Tours</a>
-          </li>
-          <li>
-            <a href="#">Botes Deportivos</a>
-          </li>
-          <li>
-            <a href="#">Decoraciones</a>
-          </li>
-          <li></li>
-        </ul>
+      <nav id="nav" class="main-nav">
+        <div class="nav-links">
+          <a href="{% url 'home' %}"
+             class="link-item {% if request.path == '/inicio/' %}active{% endif %}">Inicio</a>
+          <a href="{% url 'transfers' %}"
+             class="link-item {% if request.path == '/transporte/' %}active{% endif %}">Traslados</a>
+          <a href="{% url 'tours' %}"
+             class="link-item {% if request.path|slice:':7' == '/tours/' %}active{% endif %}">Tours</a>
+          <a href="#" class="link-item">Botes Deportivos</a>
+          <a href="#" class="link-item">Decoraciones</a>
+        </div>
       </nav>
+      <button id="button-menu" class="button-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <a href="https://wa.link/u1462m" target='_blank' class="btn">Cotizar</a>
     </div>
     <div class="content">
@@ -114,5 +108,6 @@
       <a href="gegova.com.co">gegova.com.co</a>
     </div>
     <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/menu.js' %}"></script>
   </body>
 </html>
