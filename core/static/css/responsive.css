@@ -383,11 +383,15 @@
   }
 
   .barra {
-    height: 98vh;
+    height: 110vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .form-booking {
-    height: 98vh;
+    height: 110vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   .box-form-booking {
     flex-direction: column;
