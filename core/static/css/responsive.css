@@ -173,6 +173,7 @@
   }
 
   .tours article {
+    flex-basis: 50%;
     height: 380px;
   }
   .tours article p {
