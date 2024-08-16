@@ -106,7 +106,8 @@
 }
 
 @media screen and (max-width: 440px) {
-  .btn {
+  .navegate-h .btn,
+  .navegate .btn {
     display: none;
   }
 
@@ -375,6 +376,10 @@
 
   .button-menu.close span:nth-child(3) {
     display: none;
+  }
+
+  .leg-page {
+    width: 90%;
   }
 }
 
