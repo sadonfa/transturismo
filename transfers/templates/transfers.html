@@ -3,9 +3,6 @@
 {% load static %}
 {% block content %}
   <div class="content">
-    {% comment %}
-  <h1>{{ title }}</h1>
-    {% endcomment %}
     <div class="translate">
       {% for vehiculo in vehiculos %}
         {% if vehiculo.id|divisibleby:2 == False %}
@@ -69,7 +66,6 @@
         {% endif %}
       {% endfor %}
     </div>
-    <hr class="separador-v">
     <div class="noticias">
       <p>
         Los recargos nocturnos aplican en los horarios de
