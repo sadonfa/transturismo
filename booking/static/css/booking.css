@@ -34,6 +34,7 @@
 }
 
 .box-form-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   /* border: 1px solid red; */
@@ -110,6 +111,10 @@ form input::placeholder {
   margin-bottom: 35px;
 }
 
+.title-form span {
+  color: #777;
+}
+
 .form-booking {
   color: #333;
   font-family: "Montserrat";
@@ -120,4 +125,32 @@ form input::placeholder {
   font-weight: bold;
   margin-right: 5px;
   text-transform: capitalize;
+}
+
+.label_form {
+  position: absolute;
+  top: 7px;
+  left: 15px;
+  pointer-events: none;
+
+  color: var(--color-subtitles);
+  transition: all 300ms ease-in-out;
+}
+
+.box-form-item input:focus ~ label,
+.box-form-item input:not(:placeholder-shown) ~ label {
+  top: -20px;
+  left: 0;
+  font-size: 13px;
+  color: #ff8800;
+  border-color: #ff8800;
+  z-index: 1;
+}
+
+.box-form-item input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.box-form-item input::-moz-placeholder {
+  color: transparent;
 }

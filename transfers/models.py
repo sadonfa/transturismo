@@ -5,7 +5,7 @@ from django_ckeditor_5.fields import CKEditor5Field
 
 class Transfers(models.Model):
     name = models.CharField(max_length=200, verbose_name="Nombre")
-    description = CKEditor5Field(verbose_name="Info")
+    description = CKEditor5Field( config_name='extends', verbose_name="Info")
     image =  models.ImageField(default="null", upload_to="transfers")
     image1 =  models.ImageField(default="null", upload_to="transfers")
     image2 =  models.ImageField(default="null", upload_to="transfers")

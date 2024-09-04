@@ -22,10 +22,10 @@
                 <p>{{ tour.description }}</p>
                 <div class="foo-arti">
                     <p>$ {{ tour.cash|intcomma }} COP</p>
-                    <button class="btn">Reservar</button>
+                    <a href="{% url 'check' tour.id %}" class="btn">Reservar</a>
                 </div>
                 <div class="enlace-reserva">
-                    <a href="" class="text-link">Mas detalles</a>
+                    <a href="{% url 'tour' tour.id tour.title|slugify %}" class="text-link">Más detalles</a>
                 </div>
             </article>
         {% endfor %}

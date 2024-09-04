@@ -42,7 +42,7 @@
           <a href="{% url 'tours' %}"
              class="link-item {% if request.path|slice:':7' == '/tours/' %}active{% endif %}">Tours</a>
           <a href="#" class="link-item">Botes Deportivos</a>
-          <a href="#" class="link-item">Decoraciones</a>
+          <a href="#" class="link-item">Cena en Yate</a>
         </div>
       </nav>
       <button id="button-menu" class="button-menu">
@@ -92,9 +92,6 @@
               <a href="{% url 'page' page.id page.title|slugify %}" class="link">{{ page.title }}</a>
             </li>
           {% endfor %}
-          <li>
-            <a href="#">Soporte</a>
-          </li>
         </ul>
       </div>
       <div class="foot4">

@@ -71,26 +71,29 @@
 
 .tour .i-tour {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   margin-left: 12px;
+  align-items: center;
 }
 
 .tour .i-tour .exclude,
 .tour .i-tour .include {
-  width: 40%;
+  width: 80%;
+  margin-bottom: 15px;
 }
 
 .tour .i-tour .exclude h4,
 .tour .i-tour .include h4 {
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 13px;
   margin-bottom: 10px;
   font-family: "Rubik Bold";
 }
 
 .tour .i-tour .exclude li,
 .tour .i-tour .include li {
-  font-size: 11px;
+  font-size: 14px;
   font-family: "Montserrat";
   margin-bottom: 5px;
   text-transform: lowercase;
@@ -126,4 +129,17 @@
   font-size: 12px;
   margin-right: 30px;
   text-transform: uppercase;
+}
+
+.susses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 100px;
+  margin: 25px auto;
+  background-color: darkcyan;
+  color: #fff;
+  border: 1px solid rgb(2, 112, 112);
+  border-radius: 7px;
 }

@@ -5,6 +5,7 @@
   <article class="tour">
     <div class="info-tou">
       <h3>{{ tour.title }}</h3>
+      <p>{{ tour.description }}</p>
       <div class="i-tour">
         <div class="include">
           <h4>Incluye</h4>
@@ -19,6 +20,7 @@
           </ul>
         </div>
       </div>
+      <p>{{ tour.info|safe }}</p>
       <ul class="tour-time">
         <li>
           <span>hora de recogida</span> {{ tour.time_start }}

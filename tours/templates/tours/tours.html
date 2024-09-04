@@ -14,6 +14,7 @@
     <a href="{% url 'category' 4 %}"
        class="text-link {% if request.path == '/tours/categoria/4/' %}active-sub{% endif %}">City Tours</a>
   </div>
+  {% if api.data.status == 'APPROVED' %}<div class="susses">Gracias por tu compra</div>{% endif %}
   <section class="tours">
     {% for tour in tours %}
       <article>

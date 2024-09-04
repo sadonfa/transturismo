@@ -8,7 +8,9 @@
   <div class="content-form">
     <div class="barra">.</div>
     <div class="form-booking">
-      <h3 class="title-form">{{ title }} # {{ booking.get_id_formateado }}</h3>
+      <h3 class="title-form">
+        {{ title }} # <span>{{ pk_reservas }}</span>
+      </h3>
       <div class="box-form-booking">
         <div class="box-form-item">
           <p>
@@ -90,14 +92,12 @@
                  value="pub_test_zePMlU8Dn0kqR1mquaIQYipIxcJ2eNiU" />
           <input type="hidden" name="currency" value="COP" />
           <input type="hidden" name="amount-in-cents" value="{{ total }}00" />
-          <input type="hidden" name="reference" value="01050809" />
-          <input type="hidden"
-                 name="signature:integrity"
-                 value="37c8407747e595535433ef8f6a811d853cd943046624a0ec04662b17bbf33bf5" />
+          <input type="hidden" name="reference" value="{{ pk_reservas }}" />
+          <input type="hidden" name="signature:integrity" value="{{ integrity }}" />
           <!-- OPCIONALES -->
           <input type="hidden"
                  name="redirect-url"
-                 value="http://localhost:8000/respuesta?id=01050809" />
+                 value="http://localhost:8000/tours/" />
           <button type="submit" class="btn-sw">Reservar</button>
         </form>
       </div>

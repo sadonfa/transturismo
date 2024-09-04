@@ -1,5 +1,5 @@
 from django.db import models
-from ckeditor.fields import RichTextField 
+# from ckeditor.fields import RichTextField 
 from django.utils import timezone
 from django_ckeditor_5.fields import CKEditor5Field
 
@@ -54,7 +54,7 @@ class Tours(models.Model):
     image2 =  models.ImageField(default="null", upload_to="tours")
     image3 =  models.ImageField(default="null", upload_to="tours")
     image4 =  models.ImageField(default="null", upload_to="tours")
-    info = CKEditor5Field(verbose_name="Info")
+    info = CKEditor5Field( config_name='extends')
     include = models.ManyToManyField(Include,  verbose_name="Incluye")
     noinclude = models.ManyToManyField(Exclude,  verbose_name="No Incluye")
     time_start = models.TimeField(verbose_name="Hora de salida", null=True, blank=True, default=timezone.now)

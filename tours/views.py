@@ -1,12 +1,28 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Tours, Category
+import requests
 # Create your views here.
 
 def tours(request):
     tours = Tours.objects.all()
+    if request.GET:
+         
+        id_wompi = request.GET['id']
+        URL_API =  "https://sandbox.wompi.co/v1/transactions/" + id_wompi
+
+        response = requests.get(URL_API)
+
+        if response.status_code == 200:
+            api = response.json()
+            for t in api:
+                    print(t)
+    
+    api = []
+
     return render(request, "tours/tours.html", {
         'title': 'Tours',
-        'tours': tours
+        'tours': tours,
+        'api': api
     })
 
 def tour(request, id, tour_slug):
