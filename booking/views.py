@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from tours.models import Tours
+from tours.models import Tours, Cena
 from .models import Booking
 import hashlib
 import requests
@@ -7,9 +7,12 @@ import requests
 # Create your views here.
 
 
-def check(request, id=False):   
-
-    tour = get_object_or_404(Tours, id=id)
+def check(request, id=False, opc=False):   
+    print(opc)
+    if opc == 'dinner':
+         tour = get_object_or_404(Cena, id=id)
+    else:
+         tour = get_object_or_404(Tours, id=id)
     
     return render(request, 'check.html', {
         'title': 'Informacion de reserva',

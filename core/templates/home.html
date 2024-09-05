@@ -8,9 +8,9 @@
     <div class="explora">
       <div class="info-content">
         <h1>
-          Explora lo <span>hermoso de</span>  Cartagena
+          Cartagena <span>Inspira</span>
         </h1>
-        <p>Un lugar mágico que no te puede faltar por visitar.</p>
+        <p>Una ciudad Mágica que debes visitar.</p>
         <a href="https://wa.link/u1462m" target="_blank" class="btn">Contactanos</a>
       </div>
     </div>
@@ -18,7 +18,7 @@
   {% comment %} {/* CONTENT */} {/* DESTACADOS */} {% endcomment %}
   <div class="info-title">
     <div class="cont">
-      <h2>Lugares Populares</h2>
+      <h2>Lugares Especiales</h2>
     </div>
     <span>
       <a href="{% url 'tours' %}">Ver todo</a>
@@ -34,11 +34,10 @@
         <p>{{ lugar.description|slice:":100" }} ...</p>
         <div class="foo-arti">
           <p>$ {{ lugar.cash|intcomma }} COP</p>
-          <a href="{% url 'check' lugar.id %}" class="btn">Reservar</a>
+          <a href="{% url 'check' lugar.id 'dinner' %}" class="btn">Reservar</a>
         </div>
         <div class="enlace-reserva">
-          <a href="{% url 'tour' lugar.id lugar.title|slugify %}"
-             class="text-link">Más detalles</a>
+          <a href="{% url 'cenas' %}" class="text-link">Más detalles</a>
         </div>
       </article>
     {% endfor %}
@@ -81,7 +80,7 @@
         <p>{{ tour.description|slice:":100" }}</p>
         <div class="foo-arti">
           <p>$ {{ tour.cash|intcomma }} COP</p>
-          <a href="{% url 'check' tour.id %}" class="btn">Reservar</a>
+          <a href="{% url 'check' tour.id 'tour' %}" class="btn">Reservar</a>
         </div>
         <div class="enlace-reserva">
           <a href="{% url 'tour' tour.id tour.title|slugify %}" class="text-link">Más detalles</a>

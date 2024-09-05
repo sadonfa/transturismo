@@ -46,8 +46,7 @@
           <input type="text" name="hotel" placeholder="hotel" />
           <label class="label_form" for="hotel">hotel</label>
         </div>
-        <div class="box-form-item">
-          <label for="hotel">Adultos</label>
+        <div class="box-form-item-m">
           <select name="adult" id="">
             <option value="1">1</option>
             <option value="2">2</option>
@@ -55,9 +54,9 @@
             <option value="4">4</option>
             <option value="5">5</option>
           </select>
+          <label class="label_form" for="hotel">Adultos</label>
         </div>
-        <div class="box-form-item">
-          <label for="hotel">niños</label>
+        <div class="box-form-item-m">
           <select name="childre" id="">
             <option value="0">-</option>
             <option value="1">1</option>
@@ -66,16 +65,17 @@
             <option value="4">4</option>
             <option value="5">5</option>
           </select>
+          <label class="label_form" for="hotel">niños</label>
         </div>
       </div>
       <div class="box-form-booking">
         <div class="box-form-item">
-          <label class="sub-title-3">Tour</label>
           <input type="text" name="tour" value="{{ tour.title }}" readonly />
+          <label class="label_form">Tour</label>
         </div>
         <div class="box-form-item">
-          <label class="sub-title-3">valor Por persona</label>
           <input type="text" value="$ {{ tour.cash|intcomma }} COP" readonly />
+          <label class="label_form">valor Por persona</label>
           <input type="hidden" name="cash" value=" {{ tour.cash }} " />
         </div>
       </div>

@@ -31,7 +31,7 @@
       </ul>
       <div class="foot-t">
         <span class="cash-tour">$ {{ tour.cash|intcomma }} COP</span>
-        <a href="{% url 'check' tour.id %}" class="btn">Reservar</a>
+        <a href="{% url 'check' tour.id 'tour' %}" class="btn">Reservar</a>
         {% comment %} <button class="btn">Reservar</button> {% endcomment %}
       </div>
     </div>

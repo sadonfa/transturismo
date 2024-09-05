@@ -181,7 +181,7 @@ body {
   /* margin-bottom: 100px; */
   /* margin-left: 70px; */
   height: 82vh;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(4px);
   /* border: 2px solid yellowgreen; */
   width: 42%;
 }
@@ -193,13 +193,13 @@ body {
 
 .explora .info-content h1 {
   font-family: "Rubik Bold";
-  font-size: 50px;
-  letter-spacing: 3px;
+  font-size: 45px;
+  letter-spacing: 2.5px;
   color: #fff;
   text-shadow: 0px 0px 4px #000;
   text-align: left;
-  /* text-transform: uppercase; */
-  line-height: 45px;
+  text-transform: uppercase;
+  line-height: 48px;
   /* margin-top: -100px;
   margin-bottom: 50px; */
 }
@@ -213,6 +213,7 @@ body {
 }
 
 .explora .info-content p {
+  margin-top: 12px;
   font-size: 32px;
   color: #fff;
   text-shadow: 0px 0px 3px #000;

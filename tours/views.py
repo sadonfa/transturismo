@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Tours, Category
+from .models import Tours, Category, Cena
 import requests
 # Create your views here.
 
@@ -39,4 +39,13 @@ def category(request, category_id):
 
     return render(request, "tours/category.html", {
         'category' : category
+    })
+
+def cenas(request):
+    
+    cenas = Cena.objects.all()
+
+    return render(request, "tours/cenas.html", {
+        'title': 'Cenas',
+        'cenas': cenas
     })
