@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os
 import environ
 from pathlib import Path
+# from django.
 
 env = environ.Env(
     # set casting, default value
@@ -104,10 +105,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': env('MYSQL_DB'),
-    'USER': env('MYSQL_USER'),
-   'PASSWORD': env('MYSQL_PASSWORD'),
-   'HOST': env('MYSQL_HOST'),
-   'PORT': env('MYSQL_PORT'),
+        'USER': env('MYSQL_USER'),
+        'PASSWORD': env('MYSQL_PASSWORD'),
+        'HOST': env('MYSQL_HOST'),
+        'PORT': env('MYSQL_PORT'),
     }
 }
 
@@ -156,6 +157,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Configuracion de correo 
+
 
 
 
