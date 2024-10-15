@@ -19,6 +19,7 @@ class Transfers(models.Model):
     class Meta:
         verbose_name="Transporte"
         verbose_name_plural="Transportes"
+        ordering = ['order']
 
     def __str__(self):
         return f'{self.name}' 
