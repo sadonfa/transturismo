@@ -240,7 +240,7 @@ body {
 }
 
 .description .emblema {
-  width: 30%;
+  width: 25%;
   /* border: 1px solid red; */
 }
 
@@ -251,7 +251,7 @@ body {
 }
 
 .description .info-content {
-  width: 35%;
+  width: 45%;
 }
 
 .description .info-content h2 {
