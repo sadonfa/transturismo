@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="{% static 'css/pages.css' %}" />
     <link rel="stylesheet" href="{% static 'css/botones.css' %}" />
     <link rel="stylesheet" href="{% static 'css/booking.css' %}" />
+    <!-- estilos linghtbox2 -->
+    <link rel="stylesheet" href="{% static 'lightbox/css/lightbox.min.css' %}">
     <!-- Estilos Responsive -->
     <link rel="stylesheet"
           type="text/css"
@@ -20,6 +22,10 @@
     <link rel="shortcut icon"
           href="{% static 'img/favicon.ico' %}"
           type="image/x-icon">
+    <!-- Jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://checkout.wompi.co/widget.js"></script>
     <title>Transturismo Cartagena |
       {% block title %}
@@ -108,6 +114,8 @@
       Transturismo Cartagena | Creado por &copy;
       <a href="gegova.com.co">gegova.com.co</a>
     </div>
+    <!-- script linghtbox2 -->
+    <script src="{% static  'lightbox/js/lightbox.js' %}"></script>
     <script src="{% static 'js/script.js' %}"></script>
     <script src="{% static 'js/menu.js' %}"></script>
   </body>

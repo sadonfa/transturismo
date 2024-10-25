@@ -235,3 +235,7 @@ h1 {
   border-radius: 50%;
   line-height: 25px;
 }
+
+.light-size {
+  width: 30%;
+}

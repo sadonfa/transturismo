@@ -39,10 +39,22 @@
       <div class="galeria-v">
         <div class="col">
           <div class="box1">
-            <img src="{{ tour.image1.url }}" alt="{{ tour.name }}" />
+            <a class="demo"
+               href="{{ tour.image1.url }}"
+               data-lightbox="{{ tour.name }}">
+              <img class="example-image"
+                   src="{{ tour.image1.url }}"
+                   alt="{{ tour.name }}" />
+            </a>
           </div>
           <div class="box2">
-            <img src="{{ tour.image2.url }}" alt="{{ tour.name }} " />
+            <a class="demo"
+               href="{{ tour.image2.url }}"
+               data-lightbox="{{ tour.name }}">
+              <img class="example-image"
+                   src="{{ tour.image2.url }}"
+                   alt="{{ tour.name }}" />
+            </a>
           </div>
         </div>
         <div class="col">
