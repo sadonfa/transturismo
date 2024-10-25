@@ -25,7 +25,7 @@ def tours(request):
         'api': api
     })
 
-def tour(request, id, tour_slug):
+def tour(request, id, tour_slug ): 
     tour = Tours.objects.get(id=id)
     print(tour.category.all)
     return render(request, "tours/tour.html", {
