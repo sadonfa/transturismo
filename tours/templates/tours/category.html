@@ -5,6 +5,8 @@
     <div class="menu-categorias">
         <a href="{% url 'tours' %}"
            class="text-link {% if request.path == '/tours/' %}active-sub{% endif %}">Todos</a>
+        <a href="{% url 'category' 5 %}"
+           class="text-link {% if request.path == '/tours/categoria/5/' %}active-sub{% endif %}">Toures en Ofertas</a>
         <a href="{% url 'category' 2 %}"
            class="text-link {% if request.path == '/tours/categoria/2/' %}active-sub{% endif %}">Islas Privadas</a>
         <a href="{% url 'category' 1 %}"
