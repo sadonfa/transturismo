@@ -6,7 +6,6 @@
     <div class="info-tou">
       <h3>{{ tour.title }}</h3>
       {% comment %} <p>{{ tour.description }}</p> {% endcomment %}
-      <p>{{ tour.info|safe }}</p>
       <div class="i-tour">
         <div class="include">
           <h4>Incluye</h4>
@@ -21,14 +20,15 @@
           </ul>
         </div>
       </div>
-      <ul class="tour-time">
+      <p>{{ tour.info|safe }}</p>
+      {% comment %} <ul class="tour-time">
         <li>
           <span>hora de recogida</span> {{ tour.time_start }}
         </li>
         <li>
           <span>hora de regreso</span> {{ tour.time_end }}
         </li>
-      </ul>
+      </ul> {% endcomment %}
       <div class="foot-t">
         <span class="cash-tour">$ {{ tour.cash|intcomma }} COP</span>
         <a href="{% url 'check' tour.id 'tour' %}" class="btn">Reservar</a>
