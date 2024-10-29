@@ -6,6 +6,9 @@
     <meta name="keywords" content="foo,bar" />
     <meta name="description" content="foo" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fontawase -->
+    <link rel="stylesheet"
+          href="{% static 'fonts/fontawesome-free-6.1.2-web/css/all.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'css/fonts.css' %}" />
     <link rel="stylesheet" href="{% static 'css/translate.css' %}" />
@@ -59,10 +62,11 @@
         <div class="logo">
           <img src="{% static 'img/logo.png' %} " alt="Logo Transturismo" />
         </div>
-        <p>
-          Descubra los lugares de interés de Cartagena. Su guía lo llevará a
-          lugares históricos en toda la ciudad amurallada.
-        </p>
+        <div class="redes">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-tiktok"></i>
+        </div>
       </div>
       <div class="foot2">
         <h3>Enlaces rápidos</h3>
@@ -103,6 +107,13 @@
           <li>+57 313 876 85 61</li>
           <li>transturismocartagena@gmail.com</li>
         </ul>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.2590006741716!2d-75.55972262617699!3d10.40099218972587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef625507a63ca21%3A0x10583f51512de0e1!2sAgencia%20Transturismo%20Cartagena!5e0!3m2!1ses!2sco!4v1730208942208!5m2!1ses!2sco"
+                width="100%"
+                height="150"
+                style="border:0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </footer>
     <div class="autor">

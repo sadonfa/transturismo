@@ -266,6 +266,7 @@ body {
   color: #777;
   margin-top: 20px;
   margin-bottom: 35px;
+  text-align: justify;
   /* line-height: 30px; */
 }
 
@@ -655,4 +656,27 @@ body {
   margin-right: 25px;
   margin-bottom: 25px;
   text-align: right;
+}
+
+.redes {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.redes i {
+  font-size: 22px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #ff8800;
+
+  transition: all 200ms ease-in-out;
+}
+
+.redes i:hover {
+  cursor: pointer;
+  color: #222;
 }
