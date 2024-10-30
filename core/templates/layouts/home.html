@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="foo,bar" />
+    <meta name="description" content="foo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fontawase -->
+    <link rel="stylesheet"
+          href="{% static 'fonts/fontawesome-free-6.1.2-web/css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/translate.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/tours.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/pages.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/botones.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/booking.css' %}" />
+    <!-- Estilos Responsive -->
+    <link rel="stylesheet"
+          type="text/css"
+          href="{% static 'css/responsive.css' %}" />
+    <link rel="shortcut icon"
+          href="{% static 'img/favicon.ico' %}"
+          type="image/x-icon">
+    <script type="text/javascript" src="https://checkout.wompi.co/widget.js"></script>
+    <title>Transturismo Cartagena |
+      {% block title %}{% endblock %}
+    </title>
+  </head>
+  <body>
+    <div class="navegate-h">
+      <div class="logo">
+        <img src="{% static 'img/logo.png' %} " alt="Logo Transturismo" />
+        <span>RNT48551</span>
+      </div>
+      <nav id="nav" class="main-nav">
+        <div class="nav-links">
+          <a href="{% url 'home' %}"
+             class="link-item {% if request.path == '/inicio/' %}active{% endif %}">Inicio</a>
+          <a href="{% url 'transfers' %}"
+             class="link-item {% if request.path == '/transporte/' %}active{% endif %}">Traslados</a>
+          <a href="{% url 'tours' %}"
+             class="link-item {% if request.path|slice:':7' == '/tours/' %}active{% endif %}">Tours</a>
+          <a href="#" class="link-item">Botes Deportivos</a>
+          <a href="{% url 'cenas' %}"
+             class="link-item {% if request.path == '/cenas/' %}active{% endif %}">Cena en Yate</a>
+        </div>
+      </nav>
+      <button id="button-menu" class="button-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a href="https://wa.link/u1462m" target='_blank' class="btn">Cotizar</a>
+    </div>
+    <div class="content">
+      {% block content %}{% endblock %}
+    </div>
+    <footer class="footer">
+      <div class="foot1">
+        <div class="logo">
+          <img src="{% static 'img/logo.png' %} " alt="Logo Transturismo" />
+        </div>
+        <div class="redes">
+          <a href="https://www.instagram.com/transturismocartagena/"
+             target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/transturismoC" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+      <div class="foot2">
+        <h3>Enlaces rápidos</h3>
+        <ul>
+          <li>
+            <a href="{% url 'home' %}">Inicio</a>
+          </li>
+          <li>
+            <a href="{% url 'transfers' %}">Traslados</a>
+          </li>
+          <li>
+            <a href="{% url 'tours' %}">Toures</a>
+          </li>
+          <li>
+            <a href="#">Botes Deportivos</a>
+          </li>
+          <li>
+            <a href="#">Decoraciones</a>
+          </li>
+        </ul>
+      </div>
+      <div class="foot3">
+        <h3>Enlaces rápidos</h3>
+        {% load pages_extras %}
+        {% get_page_list as page_list %}
+        <ul>
+          {% for page  in page_list %}
+            <li>
+              <a href="{% url 'page' page.id page.title|slugify %}" class="link">{{ page.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="foot4">
+        <h3>Contacto</h3>
+        <ul>
+          <li>Cra. 2 #6 - 40, Cartagena de Indias</li>
+          <li>+57 313 876 85 61</li>
+          <li>transturismocartagena@gmail.com</li>
+        </ul>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.2590006741716!2d-75.55972262617699!3d10.40099218972587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef625507a63ca21%3A0x10583f51512de0e1!2sAgencia%20Transturismo%20Cartagena!5e0!3m2!1ses!2sco!4v1730208942208!5m2!1ses!2sco"
+                width="100%"
+                height="150"
+                style="border:0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </footer>
+    <div class="autor">
+      Transturismo Cartagena | Creado por &copy;
+      <a href="gegova.com.co">gegova.com.co</a>
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/menu.js' %}"></script>
+  </body>
+</html>

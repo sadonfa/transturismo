@@ -1,0 +1,86 @@
+{% extends 'layouts/index.html' %}
+{% load humanize %}
+{% load static %}
+{% block title %}
+    {{ title }}
+{% endblock title %}
+{% block content %}
+    <div class="content-form">
+        <div class="barra">.</div>
+        <div class="form-booking">
+            <h2>{{ title }}</h2>
+            <h3>{{ id }}</h3>
+            <div class="box-form-booking">
+                <div class="box-form-item">
+                    <p>
+                        <span>Nombre</span>{{ tour.data.created_at }}
+                    </p>
+                </div>
+                <div class="box-form-item">
+                    <p>
+                        <span>Apellido</span>{{ tour.data.status }}
+                    </p>
+                </div>
+            </div>
+            <div class="box-form-booking">
+                <div class="box-form-item">
+                    <p>
+                        <span>Celular</span>{{ booking.phone }}
+                    </p>
+                </div>
+                <div class="box-form-item">
+                    <p>
+                        <span>Correo</span>{{ booking.mail }}
+                    </p>
+                </div>
+            </div>
+            <div class="box-form-booking">
+                <div class="box-form-item">
+                    <p>
+                        <span>Pais</span>{{ booking.contry }}
+                    </p>
+                </div>
+                <div class="box-form-item">
+                    <p>
+                        <span>Ciudad de origen</span>{{ booking.city }}
+                    </p>
+                </div>
+            </div>
+            <div class="box-form-booking">
+                <div class="box-form-item">
+                    <p>
+                        <span>Hotel</span>{{ booking.hotel }}
+                    </p>
+                </div>
+                <div class="box-form-item">
+                    <p>
+                        <span>Tours</span>{{ booking.tour }}
+                    </p>
+                </div>
+            </div>
+            <div class="box-form-booking">
+                <div class="box-form-item">
+                    <p>
+                        <span>Cant Adultos</span>{{ booking.adults }}
+                    </p>
+                </div>
+                <div class="box-form-item">
+                    <p>
+                        <span>Cant Niños</span>{{ booking.childre }}
+                    </p>
+                </div>
+            </div>
+            <div class="box-form-booking">
+                <div class="box-form-item">
+                    <p>
+                        <span>valor adultos</span>$  COP
+                    </p>
+                </div>
+                <div class="box-form-item">
+                    <p>
+                        <span>valor Total</span>$ {{ tour.data.amount_in_cents|intcomma }} COP
+                    </p>
+                </div>
+            </div>
+        </div>
+    {% endblock content %}

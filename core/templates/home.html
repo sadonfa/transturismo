@@ -1,0 +1,168 @@
+{% extends "layouts/home.html" %}
+{% load static %}
+{% block title %}{{ title }}{% endblock %}
+{% load humanize %}
+{% block content %}
+  <header class="header">
+    {% comment %} {/* HEADER */} {% endcomment %}
+    <div class="explora">
+      <div class="info-content">
+        <h1>
+          Cartagena <span>Inspira</span>
+        </h1>
+        <p>
+          Descubre el encanto eterno de Cartagena , donde cada rincón guarda una historia y cada atardecer te invita a soñar.
+        </p>
+        <a href="https://wa.link/u1462m" target="_blank" class="btn">Contactanos</a>
+      </div>
+    </div>
+  </header>
+  {% comment %} {/* CONTENT */} {/* DESTACADOS */} {% endcomment %}
+  <div class="info-title">
+    <div class="cont">
+      <h2>Lugares Especiales</h2>
+    </div>
+    <span>
+      <a href="{% url 'tours' %}">Ver todo</a>
+    </span>
+  </div>
+  <div class="tours">
+    {% for lugar in lugares %}
+      <article>
+        <div class="image-tour">
+          <img src="{{ lugar.image1.url }}" alt="{{ lugar.title }}" />
+        </div>
+        <h3>{{ lugar.title }}</h3>
+        <p>{{ lugar.description|slice:":100" }} ...</p>
+        <div class="foo-arti">
+          <p>$ {{ lugar.cash|intcomma }} COP</p>
+          <a href="{% url 'check' lugar.id 'dinner' %}" class="btn">Reservar</a>
+        </div>
+        <div class="enlace-reserva">
+          <a href="{% url 'cenas' %}" class="text-link">Más detalles</a>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+  {% comment %} {/* DESCRIPTION */} {% endcomment %}
+  <div class="description">
+    <div class="emblema">
+      <img src="{% static 'img/tourhistorico.png' %}" alt="Cartagena de Indias" />
+    </div>
+    <div class="info-content">
+      <h2>Cartagena Inspira</h2>
+      <p>
+        En Transturismo Cartagena, ofrecemos servicios de transporte turístico y empresarial diseñados
+        para brindar comodidad, seguridad y experiencias excepcionales en la ciudad de Cartagena.
+        Nos especializamos en tours personalizados y soluciones de transporte corporativo adaptadas a las
+        necesidades de nuestros clientes.
+      </p>
+      <p>
+        Contamos con un equipo de conductores altamente calificados y profesionales, dedicados a garantizar
+        un servicio seguro y confiable. Nuestro compromiso es proporcionar un transporte confortable y
+        personalizado que haga de cada viaje una experiencia memorable.
+      </p>
+      <p>
+        Elige Transturismo Cartagena para descubrir lo mejor de la ciudad o para tus necesidades empresariales con un servicio de calidad y confianza.
+      </p>
+      <div class="enlaces-ico">
+        <a href="{% url 'category' 1 %}">Playas</a>
+        <a href="{% url 'category' 2 %}">Islas Privadas</a>
+        <a href="{% url 'transfers' %}">Transportes</a>
+        <a href="{% url 'category' 4 %}">CityTours Históricos</a>
+      </div>
+    </div>
+  </div>
+  {% comment %} {/* TOURS */} {% endcomment %}
+  <div class="info-title">
+    <div class="cont">
+      <h2>Explorar Lugares</h2>
+    </div>
+    <span>
+      <a href="{% url 'tours' %}">Ver todo</a>
+    </span>
+  </div>
+  <section class="tours">
+    {% for tour in tours %}
+      <article>
+        <div class="image-tour">
+          <img src=" {{ tour.image1.url }}" alt="Bora Bora" />
+        </div>
+        <h3>{{ tour.title }}</h3>
+        <p>{{ tour.description|slice:":100" }}</p>
+        <div class="foo-arti">
+          <p>$ {{ tour.cash|intcomma }} COP</p>
+          <a href="{% url 'check' tour.id 'tour' %}" class="btn">Reservar</a>
+        </div>
+        <div class="enlace-reserva">
+          <a href="{% url 'tour' tour.id tour.title|slugify %}" class="text-link">Más detalles</a>
+        </div>
+      </article>
+    {% endfor %}
+  </section>
+  <div class="info-title">
+    <div class="cont">
+      <h2>Blog</h2>
+      <span>- Mira todo lo relacionado con tus vacaciones</span>
+    </div>
+    <span>
+      <a href="#">Ver todo</a>
+    </span>
+  </div>
+  <div class="noticias">
+    <p>
+      Estamos comprometidos con la protección a niños, niñas y adolescentes de
+      nuestro país! De acuerdo con la ley 679/2001, 1336/2009 y la resolución
+      2064 de 2010, rechazamos la explotación sexual y demás formas de abuso a
+      niños, niñas y adolescentes de cualquier actividad que atente contra el
+      patrimonio cultural y el tráfico ilegal de flora y fauna, advertimos que
+      estas prácticas son sancionadas penal y administrativamente conforme a las
+      disposiciones legales vigentes
+    </p>
+    <button class="btn">Leer más ...</button>
+  </div>
+  {% comment %} GALLERY {% endcomment %}
+  <div class="info-title">
+    <div class="cont">
+      <h2>Nuestra Galería</h2>
+      <span>- Lugares emblemáticos de Cartagena</span>
+    </div>
+    <span>
+      <a hred="#">Ver todo</a>
+    </span>
+  </div>
+  <div class="gallery">
+    <div class="col">
+      <div class="box1">
+        <img src="{% static 'img/gallery/1.png' %} " alt="Imagen 1" />
+      </div>
+      <div class="box2">
+        <img src="{% static 'img/gallery/image2.png' %} " alt="Imagen 2" />
+      </div>
+    </div>
+    <div class="col">
+      <div class="box2">
+        <img src="{% static 'img/gallery/3.png' %} " alt="Imagen 2" />
+      </div>
+      <div class="box1">
+        <img src="{% static 'img/gallery/4.png' %} " alt="Imagen 1" />
+      </div>
+    </div>
+    <div class="col">
+      <div class="box1">
+        <img src="{% static 'img/gallery/5.png' %} " alt="Imagen 1" />
+      </div>
+      <div class="box2">
+        <img src="{% static 'img/gallery/image1.png' %}" alt="Imagen 2" />
+      </div>
+    </div>
+  </div>
+  <div class="incription">
+    <form action="">
+      <label for="">Suscríbete a nuestro boletín.</label>
+      <input type="text" placeholder="Ingrese su email" />
+      <input type="submit" value="Enviar" />
+    </form>
+  </div>
+{% endblock %}
+</div>

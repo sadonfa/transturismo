@@ -1,0 +1,420 @@
+@media screen and (max-width: 820px) {
+  .navegate-h {
+    height: 80px;
+  }
+  .nav ul li a {
+    font-size: 13px;
+  }
+  .nav ul li {
+    padding: 5px 8px;
+  }
+  .btn {
+    width: 100px;
+    height: 32px;
+  }
+  .header {
+    width: 96%;
+    margin-top: 0px;
+  }
+  .explora {
+    width: 70%;
+    height: 35vh;
+  }
+  .explora .info-content h1 {
+    font-size: 45px;
+  }
+  .explora .info-content p {
+    font-size: 30px;
+  }
+  .explora .info-content a {
+    margin-top: 30px;
+  }
+  .tours article .foo-arti p {
+    font-size: 20px;
+  }
+  .tours article p {
+    font-size: 11px;
+    margin-right: 15px;
+  }
+  .tours article h3 {
+    font-size: 15px;
+  }
+  .noticias .btn {
+    font-size: 13px;
+    border-radius: 7px;
+  }
+
+  .gallery .col .box1 {
+    height: 400px;
+  }
+
+  .gallery .col .box2 {
+    height: 300px;
+  }
+
+  .foot1,
+  .foot2,
+  .foot3,
+  .foot4 {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .nav ul li a {
+    font-size: 12px;
+  }
+
+  .tours article h3 {
+    margin-top: 0px;
+  }
+
+  .tours article .foo-arti p {
+    font-size: 18px;
+  }
+  .tours article .foo-arti .btn {
+    height: 25px;
+    font-size: 12px;
+    width: 90px;
+  }
+
+  .description .info-content .enlaces-ico a {
+    font-size: 10px;
+  }
+  .gallery .col .box1 {
+    height: 350px;
+  }
+  .gallery .col .box2 {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .tours article .foo-arti p {
+    font-size: 15px;
+  }
+
+  .tours {
+    margin: 0px;
+  }
+  .tours article p {
+    margin-right: 29px;
+  }
+  .description .info-content {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .navegate-h .btn,
+  .navegate .btn {
+    display: none;
+  }
+
+  .navegate-h,
+  .navegate {
+    justify-content: space-between;
+    height: 80px;
+  }
+
+  .navegate-h .logo,
+  .navegate .logo {
+    margin-left: 25px;
+  }
+  .explora {
+    width: 80%;
+    height: 45vh;
+  }
+  .explora .info-content {
+    width: 85%;
+  }
+  .explora .info-content h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .explora .info-content p {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .nav {
+    display: none;
+  }
+  .info-title h2 {
+    font-size: 21px;
+  }
+  .info-title span a {
+    font-size: 12px;
+  }
+  .description {
+    flex-direction: column;
+  }
+
+  .description .emblema {
+    width: 60%;
+  }
+
+  .description .info-content {
+    width: 80%;
+    text-align: justify;
+    margin-top: 25px;
+  }
+
+  .description .info-content h2 {
+    text-align: center;
+    font-size: 35px;
+  }
+
+  .description .info-content .enlaces-ico {
+    align-items: center;
+    text-align: center;
+  }
+  .description .info-content .enlaces-ico a {
+    font-size: 12px;
+    margin-top: 15px;
+  }
+
+  .tours article {
+    flex-basis: 50%;
+    height: 380px;
+  }
+  .tours article p {
+    font-size: 12px;
+  }
+  .tours article .foo-arti p {
+    font-size: 20px;
+  }
+  .noticias {
+    width: 80%;
+  }
+  .noticias p {
+    font-size: 13px;
+  }
+  .gallery .col .box1 {
+    height: 200px;
+    margin-bottom: 15px;
+  }
+  .gallery .col .box2 {
+    height: 150px;
+    margin-bottom: 15px;
+  }
+  .incription {
+    width: 80%;
+    margin: 0px auto;
+  }
+  .incription form label {
+    font-size: 28px;
+    text-align: left;
+    width: 62%;
+  }
+
+  .incription form input[type="text"] {
+    width: 70%;
+    height: 70px;
+    padding: 12px 22px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 2px #ddd;
+  }
+
+  .footer {
+    align-items: center;
+    flex-direction: column;
+  }
+  .foot1,
+  .foot2,
+  .foot3,
+  .foot4 {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .autor a,
+  .autor {
+    font-size: 10px;
+  }
+
+  .tour .info-tou {
+    order: 2;
+    width: 90%;
+    margin: 0px auto;
+  }
+  .tour {
+    flex-direction: column;
+  }
+  .tour .mask {
+    width: 110%;
+  }
+  .tour .i-tour {
+    margin-top: 25px;
+  }
+  .tour .foot-t {
+    margin-left: 0px;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .tour .info-tou .btn {
+    margin-left: 0px;
+    margin-top: 25px;
+  }
+  .galeria-v .col .box2,
+  .galeria-v .col .box1 {
+    margin-bottom: 3px;
+  }
+
+  .vehiculo {
+    flex-direction: column;
+  }
+  .vehiculo .mask {
+    width: 105%;
+  }
+  .vehiculo .info-trans-l {
+    order: 2;
+  }
+
+  .vehiculo .info-trans,
+  .vehiculo .info-trans-l {
+    width: 100%;
+    margin-left: 0px;
+    align-items: center;
+  }
+
+  .vehiculo .info-trans-l p,
+  .vehiculo .info-trans p {
+    width: 90%;
+    margin: 0px auto;
+  }
+
+  .vehiculo .info-trans-l .btn-blue,
+  .vehiculo .info-trans .btn-blue {
+    margin-top: 30px;
+  }
+  .vehiculo .info-trans-l h3 {
+    text-align: center;
+  }
+  .vehiculo .info-trans-l h3,
+  .vehiculo .info-trans h3 {
+    margin-left: 0px;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    margin-left: -100%;
+    transition: all 0.2s linear;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .main-nav.show {
+    margin-left: 0;
+  }
+
+  .nav-links {
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .link-item {
+    margin-top: 2rem;
+    color: #444444;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+  }
+
+  .button-menu {
+    z-index: 200;
+    width: 40px;
+    height: 40px;
+    margin-right: 25px;
+    border: none;
+    display: flex;
+    background: none;
+    flex-direction: column; /* Pondrá un span debajo del otro*/
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  /* 
+    Dibujamos una línea recta por cada span creando el tipico menu hamburguesa
+  */
+
+  .button-menu span {
+    width: 37px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #ff8800;
+    border-radius: 3px;
+    transform-origin: 4px 0px;
+    transition: all 0.2s linear;
+  }
+
+  .button-menu.close span {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);
+    background: #ff8800;
+  }
+
+  .button-menu.close span:nth-child(2) {
+    transform: rotate(-45deg) translate(-8px, 5px);
+  }
+
+  .button-menu.close span:nth-child(3) {
+    display: none;
+  }
+
+  .leg-page {
+    width: 90%;
+  }
+
+  .barra {
+    height: 110vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .form-booking {
+    height: 110vh;
+    width: 80%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .box-form-booking {
+    flex-direction: column;
+  }
+  .box-form-item {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .explora .info-content h1 {
+    font-size: 35px;
+    line-height: 35px;
+  }
+  .tours article {
+    height: 430px;
+  }
+  .incription form input[type="text"] {
+    width: 60%;
+  }
+  .info-title span {
+    font-size: 10px;
+  }
+}

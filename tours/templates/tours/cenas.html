@@ -1,0 +1,45 @@
+{% extends 'layouts/index.html' %}
+{% block title %}
+    {{ title }}
+{% endblock title %}
+{% load humanize %}
+{% block content %}
+    {% if api.data.status == 'APPROVED' %}<div class="susses">Gracias por tu compra</div>{% endif %}
+    <section class="cenas">
+        {% for cena in cenas %}
+            <article class="cenas__cena">
+                <div class="cena__box-image">
+                    <img src="{{ cena.image1.url }}"
+                         width="150px"
+                         alt="{{ cena.title }}"
+                         class="cena__image" />
+                </div>
+                <div class="cena__detail">
+                    <div class="cena__info">
+                        <h3 class="cena__title">{{ cena.title }}</h3>
+                        <p class="cena__description">{{ cena.description }}</p>
+                        <div class="cena__foo-arti">
+                            <p class="cena__cash">$ {{ cena.cash|intcomma }} COP</p>
+                            <a href="{% url 'check' cena.id 'dinner' %}" class="cena__button">Reservar</a>
+                        </div>
+                    </div>
+                    <div class="cena__carac">
+                        <div class="cena__include">
+                            <h4 class="cena__subtitle">Incluye</h4>
+                            <ul>
+                                {% for inclu in cena.include.all %}<li class="cena__option">{{ inclu }}</li>{% endfor %}
+                            </ul>
+                        </div>
+                        <div class="cena__exclude">
+                            <h4 class="cena__subtitle">No Incluye</h4>
+                            <ul>
+                                {% for ixclu in cena.noinclude.all %}<li class="cena__option">{{ ixclu }}</li>{% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cena__ckedit">{{ cena.info|safe }}</div>
+                </div>
+            </article>
+        {% endfor %}
+    </section>
+{% endblock content %}

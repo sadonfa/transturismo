@@ -1,0 +1,285 @@
+:root {
+  --color-primary: #ff8800;
+  --color-secundary: #fff;
+  --color-tertiary: #333;
+}
+
+html {
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.tour {
+  display: flex;
+  justify-content: space-between;
+  /* margin-top: 50px; */
+}
+
+.tour .mask {
+  width: 60%;
+  margin-left: -14px;
+  /* border: 2px solid blue; */
+  /* box-shadow: 0px 0px 10px #333; */
+}
+
+.tour .mask img {
+  width: 100%;
+}
+
+.tour .info-tou {
+  width: 30%;
+  margin-left: 80px;
+  display: flex;
+  align-items: start;
+  /* justify-content: flex-end; */
+  flex-direction: column;
+}
+
+.tour .info-tou h3 {
+  display: block;
+  color: #fff;
+  padding: 15px 35px;
+  position: relative;
+  margin-top: 40px;
+  text-align: left;
+  box-shadow: 0px 0px 8px #333;
+  width: 135%;
+  font-size: 24px;
+  margin-bottom: 15px;
+  background-color: #ff8800;
+  text-transform: uppercase;
+}
+
+.tour .info-tou p {
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 35px;
+  text-align: left;
+  font-family: "Montserrat";
+  font-size: 14px;
+  /* box-shadow: 0px 0px 8px #444; */
+  /* border: 1px solid red; */
+}
+
+.tour .info-tou .btn {
+  margin-left: 35px;
+  border-radius: 10px;
+}
+
+.separador-v {
+  width: 80%;
+  margin: 50px auto;
+  border-color: #eee;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+.tour .cash-tour {
+  color: #ff8800;
+  margin: 0px !important;
+}
+
+.tour .i-tour {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 12px;
+  align-items: center;
+}
+
+.tour .i-tour .exclude,
+.tour .i-tour .include {
+  width: 80%;
+  margin-bottom: 15px;
+}
+
+.tour .i-tour .exclude h4,
+.tour .i-tour .include h4 {
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: 10px;
+  font-family: "Rubik Bold";
+}
+
+.tour .i-tour .exclude li,
+.tour .i-tour .include li {
+  font-size: 14px;
+  font-family: "Montserrat";
+  margin-bottom: 5px;
+  text-transform: lowercase;
+}
+
+.tour .foot-t {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 35px;
+  margin-top: 20px;
+  /* border: 1px solid red; */
+}
+
+.tour .tour-time {
+  display: flex;
+  justify-content: space-between;
+  /* flex-direction: column; */
+  margin-top: 20px;
+  margin-left: 35px;
+}
+
+.tour .tour-time li {
+  font-family: "Montserrat";
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-right: 15px;
+  list-style: none;
+}
+
+.tour .tour-time span {
+  font-family: "Rubik Bold";
+  font-size: 12px;
+  margin-right: 30px;
+  text-transform: uppercase;
+}
+
+.susses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 100px;
+  margin: 25px auto;
+  background-color: darkcyan;
+  color: #fff;
+  border: 1px solid rgb(2, 112, 112);
+  border-radius: 7px;
+}
+
+/* CENAS */
+
+.cenas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  width: 100%;
+  min-height: 100%;
+}
+
+.cenas__cena {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  width: 78%;
+  min-height: 22rem;
+  border: 1px solid var(--color-tertiary);
+  border-radius: 1.5rem;
+  box-shadow: 0 0 0.8rem var(--color-tertiary);
+}
+
+.cena__box-image {
+  width: 35%;
+}
+
+.cena__image {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  object-fit: cover;
+}
+
+.cena__detail {
+  display: flex;
+  justify-content: space-evenly;
+  width: 62%;
+}
+
+.cena__info {
+  width: 32%;
+  padding: 3rem 0;
+}
+
+.cena__title {
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-primary);
+  text-transform: uppercase;
+}
+
+.cena__description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cena__cash {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.cena__button {
+  display: inline-block;
+  padding: 1rem 2.2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 2rem;
+  border: 2px solid var(--color-primary);
+  text-transform: uppercase;
+  background-color: var(--color-primary);
+  color: var(--color-secundary);
+  transition: all 300ms ease-in-out;
+}
+
+.cena__button:hover {
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.cena__carac {
+  width: 25%;
+  margin-left: 2rem;
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+}
+
+.cena__include {
+  margin-bottom: 1rem;
+}
+
+.cena__exclude {
+  margin-bottom: 2rem;
+}
+
+.cena__subtitle {
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.cena__option {
+  font-size: 1.2rem;
+}
+
+.cena__ckedit {
+  display: block;
+  width: 28%;
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+  /* padding-left: 2rem; */
+  font-size: 1.2rem !important;
+}
+
+.cena__ckedit > p {
+  margin-bottom: 0.3rem !important;
+}

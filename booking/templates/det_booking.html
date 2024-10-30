@@ -1,0 +1,106 @@
+{% extends 'layouts/index.html' %}
+{% block title %}
+  {{ title }}
+{% endblock title %}
+{% block content %}
+  {% load static %}
+  {% load humanize %}
+  <div class="content-form">
+    <div class="barra">.</div>
+    <div class="form-booking">
+      <h3 class="title-form">
+        {{ title }} # <span>{{ pk_reservas }}</span>
+      </h3>
+      <div class="box-form-booking">
+        <div class="box-form-item">
+          <p>
+            <span>Nombre</span>{{ booking.name }}
+          </p>
+        </div>
+        <div class="box-form-item">
+          <p>
+            <span>Apellido</span>{{ booking.lastname }}
+          </p>
+        </div>
+      </div>
+      <div class="box-form-booking">
+        <div class="box-form-item">
+          <p>
+            <span>Celular</span>{{ booking.phone }}
+          </p>
+        </div>
+        <div class="box-form-item">
+          <p>
+            <span>Correo</span>{{ booking.mail }}
+          </p>
+        </div>
+      </div>
+      <div class="box-form-booking">
+        <div class="box-form-item">
+          <p>
+            <span>Pais</span>{{ booking.contry }}
+          </p>
+        </div>
+        <div class="box-form-item">
+          <p>
+            <span>Ciudad de origen</span>{{ booking.city }}
+          </p>
+        </div>
+      </div>
+      <div class="box-form-booking">
+        <div class="box-form-item">
+          <p>
+            <span>Hotel</span>{{ booking.hotel }}
+          </p>
+        </div>
+        <div class="box-form-item">
+          <p>
+            <span>Tours</span>{{ booking.tour }}
+          </p>
+        </div>
+      </div>
+      <div class="box-form-booking">
+        <div class="box-form-item">
+          <p>
+            <span>Cant Adultos</span>{{ booking.adults }}
+          </p>
+        </div>
+        <div class="box-form-item">
+          <p>
+            <span>Cant Niños</span>{{ booking.childre }}
+          </p>
+        </div>
+      </div>
+      <div class="box-form-booking">
+        <div class="box-form-item">
+          <p>
+            <span>valor adultos</span>$ {{ booking.cash|intcomma }} COP
+          </p>
+        </div>
+        <div class="box-form-item">
+          <p>
+            <span>valor Total</span>$ {{ total|intcomma }} COP
+          </p>
+        </div>
+      </div>
+      <div class="foo-form">
+        <a href="javascript:history.back()">modificar</a>
+        <form action="https://checkout.wompi.co/p/" method="GET">
+          <!-- OBLIGATORIOS -->
+          <input type="hidden"
+                 name="public-key"
+                 value="pub_prod_K4yQidpSx1kAqRLSzEQGHnHXKwui6FNT" />
+          <input type="hidden" name="currency" value="COP" />
+          <input type="hidden" name="amount-in-cents" value="{{ total }}00" />
+          <input type="hidden" name="reference" value="{{ pk_reservas }}" />
+          <input type="hidden" name="signature:integrity" value="{{ integrity }}" />
+          <!-- OPCIONALES -->
+          <input type="hidden"
+                 name="redirect-url"
+                 value="https://www.transturismocartagena.com.co/tours/" />
+          <button type="submit" class="btn-sw">Reservar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
