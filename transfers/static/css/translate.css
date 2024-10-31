@@ -239,3 +239,8 @@ h1 {
 .light-size {
   width: 30%;
 }
+
+.info-noct {
+  font-style: italic;
+  margin-bottom: 25px;
+}

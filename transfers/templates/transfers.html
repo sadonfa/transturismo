@@ -54,6 +54,10 @@
             <div class="info-trans">
               <h3>{{ vehiculo.name }}</h3>
               <p>{{ vehiculo.description|safe }}</p>
+              <p class="info-noct">
+                Los recargos nocturnos aplican en los horarios de
+                09:00 pm a 06:00 am
+              </p>
               <a href="https://wa.link/u1462m" target='_blank' class="btn-blue">Cotizacion</a>
             </div>
           </article>
@@ -63,6 +67,10 @@
             <div class="info-trans-l">
               <h3>{{ vehiculo.name }}</h3>
               <p>{{ vehiculo.description|safe }}</p>
+              <p class="info-noct">
+                Los recargos nocturnos aplican en los horarios de
+                09:00 pm a 06:00 am
+              </p>
               <a href="https://wa.link/u1462m" target='_blank' class="btn-blue">Cotizacion</a>
             </div>
             <div class="mask">
@@ -107,12 +115,6 @@
           {% if not forloop.last %}<hr class="separador-v">{% endif %}
         {% endif %}
       {% endfor %}
-    </div>
-    <div class="noticias">
-      <p>
-        Los recargos nocturnos aplican en los horarios de
-        09:00 pm a 06:00 am
-      </p>
     </div>
   </div>
 {% endblock %}
