@@ -5,7 +5,7 @@
   <div class="content">
     <div class="translate">
       {% for vehiculo in vehiculos %}
-        {% if vehiculo.id|divisibleby:2 == False %}
+        {% if vehiculo.order|divisibleby:2 == False %}
           <article class="vehiculo">
             <div class="mask">
               <div class="galeria-v">
