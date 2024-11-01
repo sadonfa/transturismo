@@ -7,7 +7,7 @@ def home(request):
     lugares = Tours.objects.filter(title='Tierra Bomba')
     tours = Tours.objects.all()[0:6]
     ofertas = [
-        Tours.objects.filter(title='Isla del encanto - pasadia premium'),
+        Tours.objects.filter(title='Isla del encanto en islas del rosario'),
         Tours.objects.filter(title='CITY TOUR HISTORICO'),
         Tours.objects.filter(title='TOUR BARÚ TERRESTRE')
     ]
