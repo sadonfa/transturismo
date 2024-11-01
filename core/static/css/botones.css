@@ -8,7 +8,7 @@
   font-size: 14px;
   font-weight: 400;
   border: none;
-  border-radius: 4px;
+  border-radius: 4rem;
   padding: 0px 16px;
   height: 40px;
   text-decoration: none;
@@ -28,7 +28,7 @@
   font-size: 14px;
   font-weight: 400;
   border: none;
-  border-radius: 4px;
+  border-radius: 4rem;
   padding: 0px 16px;
   height: 40px;
   text-decoration: none;
@@ -75,7 +75,7 @@
   font-size: 14px;
   box-shadow: 3px 3px 10px #ccc;
   border: 1px solid #ff8800;
-  border-radius: 10px;
+  border-radius: 4rem;
 }
 
 .btn-sw:hover {
