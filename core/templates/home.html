@@ -26,21 +26,23 @@
     </span>
   </div>
   <div class="tours">
-    {% for lugar in lugares %}
-      <article>
-        <div class="image-tour">
-          <img src="{{ lugar.image1.url }}" alt="{{ lugar.title }}" />
-        </div>
-        <h3>{{ lugar.title }}</h3>
-        <p>{{ lugar.description|slice:":100" }} ...</p>
-        <div class="foo-arti">
-          <p>$ {{ lugar.cash|intcomma }} COP</p>
-          <a href="{% url 'check' lugar.id 'dinner' %}" class="btn">Reservar</a>
-        </div>
-        <div class="enlace-reserva">
-          <a href="{% url 'cenas' %}" class="text-link">Más detalles</a>
-        </div>
-      </article>
+    {% for ofert in ofertas %}
+      {% for off in ofert %}
+        <article>
+          <div class="image-tour">
+            <img src="{{ off.image1.url }}" alt="{{ off.title }}" />
+          </div>
+          <h3>{{ off.title }}</h3>
+          <p>{{ off.description|slice:":100" }} ...</p>
+          <div class="foo-arti">
+            <p>$ {{ off.cash|intcomma }} COP</p>
+            <a href="{% url 'check' off.id 'dinner' %}" class="btn">Reservar</a>
+          </div>
+          <div class="enlace-reserva">
+            <a href="{% url 'cenas' %}" class="text-link">Más detalles</a>
+          </div>
+        </article>
+      {% endfor %}
     {% endfor %}
   </div>
   {% comment %} {/* DESCRIPTION */} {% endcomment %}

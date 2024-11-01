@@ -16,15 +16,17 @@ body {
   align-items: center;
   width: 90%;
   margin: 0px auto;
-  margin-bottom: -20px;
+  margin-bottom: -5px;
   margin-top: 50px;
-  /* border: 1px solid red; */
 }
 
 .info-title h2 {
+  width: 150%;
   color: #222;
   font-family: "Rubik Bold";
   font-size: 34px;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #ff8800;
 }
 
 .info-title span {
