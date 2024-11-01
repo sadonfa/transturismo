@@ -51,6 +51,7 @@ a {
   margin-bottom: 15px;
   background-color: #ff8800;
   text-transform: uppercase;
+  border-radius: 4rem;
 }
 
 .tour .info-tou p {
