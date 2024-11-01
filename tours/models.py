@@ -57,7 +57,7 @@ class Tours(models.Model):
     info = CKEditor5Field( config_name='extends')
     include = models.ManyToManyField(Include,  verbose_name="Incluye")
     noinclude = models.ManyToManyField(Exclude,  verbose_name="No Incluye")
-    horarios = CKEditor5Field( config_name='extends')
+    # horarios = CKEditor5Field( config_name='extends')
     time_start = models.TimeField(verbose_name="Hora de salida", null=True, blank=True, default=timezone.now)
     time_end = models.TimeField( verbose_name="Hora de regreso", null=True, blank=True, default=timezone.now)
     cash = models.IntegerField(verbose_name="Valor", default=0)
