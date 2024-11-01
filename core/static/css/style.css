@@ -25,6 +25,7 @@ body {
   color: #222;
   font-family: "Rubik Bold";
   font-size: 34px;
+  margin-bottom: 0.7rem;
   padding-bottom: 0.5rem;
   border-bottom: 3px solid #ff8800;
 }
