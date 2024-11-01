@@ -54,11 +54,13 @@
   margin-bottom: 15px;
   background-color: #003149;
   text-transform: uppercase;
+  border-radius: 4rem;
 }
 
 .vehiculo .info-trans-l h3 {
   margin-left: 0px;
   text-align: left;
+  border-radius: 4rem;
 }
 
 .vehiculo .info-trans-l p,
