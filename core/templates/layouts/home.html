@@ -42,10 +42,13 @@
           <a href="{% url 'transfers' %}"
              class="link-item {% if request.path == '/transporte/' %}active{% endif %}">Traslados</a>
           <a href="{% url 'tours' %}"
-             class="link-item {% if request.path|slice:':7' == '/tours/' %}active{% endif %}">Tours</a>
-          <a href="#" class="link-item">Botes Deportivos</a>
+             class="link-item {% if request.path|slice:':7' == '/tours/' %}active{% endif %}">Sol y Playa</a>
+          <a href="{% url 'category' 4 %}"
+             class="link-item {% if request.path == '/tours/categoria/4/' %}active{% endif %}">City Tours</a>
           <a href="{% url 'cenas' %}"
-             class="link-item {% if request.path == '/cenas/' %}active{% endif %}">Cena en Yate</a>
+             class="link-item {% if request.path == '/cenas/' %}active{% endif %}">Cenas</a>
+          <a href="#" class="link-item">Botes Deportivos</a>
+          <a href="{% url 'category' 5 %}" class="link-item--off active-off">Ofertas</a>
         </div>
       </nav>
       <button id="button-menu" class="button-menu">
@@ -53,7 +56,7 @@
         <span></span>
         <span></span>
       </button>
-      <a href="https://wa.link/u1462m" target='_blank' class="btn">Cotizar</a>
+      <a href="https://wa.link/u1462m" target='_blank' class="btn btn-home">Cotizar</a>
     </div>
     <div class="content">
       {% block content %}{% endblock %}
