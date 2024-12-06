@@ -7,20 +7,22 @@
       <h3>{{ tour.title }}</h3>
       {% comment %} <p>{{ tour.description }}</p> {% endcomment %}
       <p>{{ tour.info|safe }}</p>
-      <div class="i-tour">
-        <div class="include">
-          <h4>Incluye</h4>
-          <ul>
-            {% for inclu in tour.include.all %}<li>{{ inclu }}</li>{% endfor %}
-          </ul>
+      <!--
+        <div class="i-tour">
+          <div class="include">
+            <h4>Incluye</h4>
+            <ul>
+              {% for inclu in tour.include.all %}<li>{{ inclu }}</li>{% endfor %}
+            </ul>
+          </div>
+          <div class="exclude">
+            <h4>No Incluye</h4>
+            <ul>
+              {% for ixclu in tour.noinclude.all %}<li>{{ ixclu }}</li>{% endfor %}
+            </ul>
+          </div>
         </div>
-        <div class="exclude">
-          <h4>No Incluye</h4>
-          <ul>
-            {% for ixclu in tour.noinclude.all %}<li>{{ ixclu }}</li>{% endfor %}
-          </ul>
-        </div>
-      </div>
+-->
       {% comment %} <ul class="tour-time">
         <li>
           <span>hora de recogida</span> {{ tour.time_start }}
