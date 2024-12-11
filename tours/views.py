@@ -59,3 +59,12 @@ def citytours(request):
         'title': 'City Tours',
         'citytours': citytours
     })
+
+def ofertas(request):
+    
+    ofertas = Tours.objects.filter(category=5)
+
+    return render(request, "tours/ofertas.html", {
+        'title': 'Ofertas',
+        'ofertas': ofertas
+    })
