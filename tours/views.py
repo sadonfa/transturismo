@@ -26,8 +26,9 @@ def tours(request):
     })
 
 def tour(request, id, tour_slug ): 
+    
     tour = Tours.objects.get(id=id)
-    print(tour.category.all)
+
     return render(request, "tours/tour.html", {
         'title': 'Tour',
         'tour': tour
@@ -48,4 +49,13 @@ def cenas(request):
     return render(request, "tours/cenas.html", {
         'title': 'Cenas',
         'cenas': cenas
+    })
+
+def citytours(request):
+    
+    citytours = Tours.objects.filter(category=4)
+
+    return render(request, "tours/citytours.html", {
+        'title': 'City Tours',
+        'citytours': citytours
     })

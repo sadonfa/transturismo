@@ -13,8 +13,7 @@
        class="text-link {% if request.path == '/tours/categoria/2/' %}active-sub{% endif %}">Islas Privadas</a>
     <a href="{% url 'category' 1 %}"
        class="text-link {% if request.path == '/tours/categoria/1/' %}active-sub{% endif %}">Playas</a>
-    <a href="{% url 'category' 4 %}"
-       class="text-link {% if request.path == '/tours/categoria/4/' %}active-sub{% endif %}">City Tours</a>
+    {% comment %} <a href="{% url 'category' 4 %}" class="text-link {% if request.path == '/tours/categoria/4/' %}active-sub{% endif %}">City Tours</a> {% endcomment %}
   </div>
   {% if api.data.status == 'APPROVED' %}<div class="susses">Gracias por tu compra</div>{% endif %}
   <section class="tours">

@@ -43,8 +43,8 @@
              class="link-item {% if request.path == '/transporte/' %}active{% endif %}">Traslados</a>
           <a href="{% url 'tours' %}"
              class="link-item {% if request.path|slice:':7' == '/tours/' %}active{% endif %}">Sol y Playa</a>
-          <a href="{% url 'category' 4 %}"
-             class="link-item {% if request.path == '/tours/categoria/4/' %}active{% endif %}">City Tours</a>
+          <a href="{% url 'citytours' %}"
+             class="link-item {% if request.path == '/citytours/' %}active{% endif %}">City Tours</a>
           <a href="{% url 'cenas' %}"
              class="link-item {% if request.path == '/cenas/' %}active{% endif %}">Cenas</a>
           <a href="#" class="link-item">Botes Deportivos</a>
