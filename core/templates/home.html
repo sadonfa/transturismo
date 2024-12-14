@@ -37,7 +37,7 @@
           <p>{{ off.description|slice:":100" }} ...</p>
           <div class="foo-arti">
             <p>$ {{ off.cash|intcomma }} COP</p>
-            <a href="{% url 'check' off.id 'dinner' %}" class="btn">Reservar</a>
+            <a href="{% url 'check' off.id 'tour' %}" class="btn">Reservar</a>
           </div>
           <div class="enlace-reserva">
             <a href="{% url 'tour' off.id off.title|slugify %}" class="text-link">Más detalles</a>

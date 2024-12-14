@@ -1,13 +1,13 @@
-{% extends 'layouts/index.html' %}
-{% block title %}{{ title }}{% endblock %}
-{% load humanize %}
-{% block content %}
-  <article class="tour">
-    <div class="info-tou">
-      <h3>{{ tour.title }}</h3>
-      {% comment %} <p>{{ tour.description }}</p> {% endcomment %}
-      <p>{{ tour.info|safe }}</p>
-      <!--
+{% extends 'layouts/index.html' %} {% block title %}{{ title }}{% endblock %} {%
+load humanize %} {% block content %}
+<article class="tour">
+  <div class="info-tou">
+    <h3>{{ tour.title }}</h3>
+    {% comment %}
+    <p>{{ tour.description }}</p>
+    {% endcomment %}
+    <p>{{ tour.info|safe }}</p>
+    <!--
         <div class="i-tour">
           <div class="include">
             <h4>Incluye</h4>
@@ -23,83 +23,99 @@
           </div>
         </div>
 -->
-      {% comment %} <ul class="tour-time">
-        <li>
-          <span>hora de recogida</span> {{ tour.time_start }}
-        </li>
-        <li>
-          <span>hora de regreso</span> {{ tour.time_end }}
-        </li>
-      </ul> {% endcomment %}
-      <div class="foot-t">
-        <span class="cash-tour">$ {{ tour.cash|intcomma }} COP</span>
-        <a href="{% url 'check' tour.id 'tour' %}" class="btn">Reservar</a>
-        {% comment %} <button class="btn">Reservar</button> {% endcomment %}
-      </div>
+    {% comment %}
+    <ul class="tour-time">
+      <li><span>hora de recogida</span> {{ tour.time_start }}</li>
+      <li><span>hora de regreso</span> {{ tour.time_end }}</li>
+    </ul>
+    {% endcomment %}
+    <div class="foot-t">
+      <span class="cash-tour">$ {{ tour.cash|intcomma }} COP</span>
+      <a href="{% url 'check' tour.id 'tour' %}" class="btn">Reservar</a>
+      {% comment %} <button class="btn">Reservar</button> {% endcomment %}
     </div>
-    <div class="mask">
-      <div class="galeria-v">
-        <div class="col">
-          <div class="box1">
-            <a class="demo"
-               href="{{ tour.image1.url }}"
-               data-lightbox="{{ tour.title }}">
-              <img class="example-image"
-                   src="{{ tour.image1.url }}"
-                   alt="{{ tour.title }}" />
-            </a>
-          </div>
-          <div class="box2">
-            <a class="demo"
-               href="{{ tour.image2.url }}"
-               data-lightbox="{{ tour.title }}">
-              <img class="example-image"
-                   src="{{ tour.image2.url }}"
-                   alt="{{ tour.title }}" />
-            </a>
-          </div>
-        </div>
-        <div class="col">
-          <div class="box2">
-            <a class="demo"
-               href="{{ tour.image3.url }}"
-               data-lightbox="{{ tour.title }}">
-              <img class="example-image"
-                   src="{{ tour.image3.url }}"
-                   alt="{{ tour.title }}" />
-            </a>
-          </div>
-          <div class="box1">
-            <a class="demo"
-               href="{{ tour.image4.url }}"
-               data-lightbox="{{ tour.title }}">
-              <img class="example-image"
-                   src="{{ tour.image4.url }}"
-                   alt="{{ tour.title }}" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </article>
-  <hr class="separador-v">
-  {% comment %} <div class="jumbo">
-    <div class="mask">
-      <img src="{{ tour.image1.url }}" alt="{{ tour.title }}" />
-    </div>
-    <div class="info-jumbo">
-      <h1 class="heading">{{ tour.title }}</h1>
-      <p class="descrip">{{ tour.description }}</p>
-      <p class="cash-tour">$ {{ tour.cash|intcomma }} COP</p>
-       <a href="#" class="btn"> Reservar </a> 
-      <button class="btn-blue">Reservar</button>
-    </div>
-  </div> {% endcomment %}
-  <div class="incription">
-    <form action="">
-      <label for="">Suscribete a nuestro boletin</label>
-      <input type="text" placeholder="Ingrese su email" />
-      <input type="submit" value="Enviar" />
-    </form>
   </div>
+  <div class="mask">
+    <div class="galeria-v">
+      <div class="col">
+        <div class="box1">
+          <a
+            class="demo"
+            href="{{ tour.image1.url }}"
+            data-lightbox="{{ tour.title }}"
+          >
+            <img
+              class="example-image"
+              src="{{ tour.image1.url }}"
+              alt="{{ tour.title }}"
+            />
+          </a>
+        </div>
+        <div class="box2">
+          <a
+            class="demo"
+            href="{{ tour.image2.url }}"
+            data-lightbox="{{ tour.title }}"
+          >
+            <img
+              class="example-image"
+              src="{{ tour.image2.url }}"
+              alt="{{ tour.title }}"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="box2">
+          <a
+            class="demo"
+            href="{{ tour.image3.url }}"
+            data-lightbox="{{ tour.title }}"
+          >
+            <img
+              class="example-image"
+              src="{{ tour.image3.url }}"
+              alt="{{ tour.title }}"
+            />
+          </a>
+        </div>
+        <div class="box1">
+          <a
+            class="demo"
+            href="{{ tour.image4.url }}"
+            data-lightbox="{{ tour.title }}"
+          >
+            <img
+              class="example-image"
+              src="{{ tour.image4.url }}"
+              alt="{{ tour.title }}"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+<hr class="separador-v" />
+{% comment %}
+<div class="jumbo">
+  <div class="mask">
+    <img src="{{ tour.image1.url }}" alt="{{ tour.title }}" />
+  </div>
+  <div class="info-jumbo">
+    <h1 class="heading">{{ tour.title }}</h1>
+    <p class="descrip">{{ tour.description }}</p>
+    <p class="cash-tour">$ {{ tour.cash|intcomma }} COP</p>
+    <a href="#" class="btn"> Reservar </a>
+    <button class="btn-blue">Reservar</button>
+  </div>
+</div>
+{% endcomment %}
+<div class="incription">
+  <form action="">
+    <label for="">Suscribete a nuestro boletin</label>
+    <input type="text" placeholder="Ingrese su email" />
+    <input type="submit" value="Enviar" />
+  </form>
+</div>
 {% endblock %}
