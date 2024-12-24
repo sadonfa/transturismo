@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import date
 
 # Create your models here.
 
@@ -12,6 +13,7 @@ class Booking(models.Model):
     city  = models.CharField(max_length=200, verbose_name="Ciudad")
     hotel  = models.CharField(max_length=200, verbose_name="Hotel")
     cash = models.DecimalField(max_digits=12, decimal_places=2, verbose_name="Valor", default=0)
+    checkin = models.DateField(default=0, verbose_name="Checkin" )
     tour = models.CharField(max_length=200, verbose_name="Tours")
     adults = models.CharField(max_length=100, verbose_name="Adultos")
     childre = models.CharField(max_length=100, verbose_name="Niños")

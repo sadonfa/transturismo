@@ -30,7 +30,7 @@
   width: 80%;
   justify-content: space-evenly;
   /* border: 1px solid blue; */
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .box-form-item,
@@ -129,7 +129,17 @@ form input::placeholder {
 
 .form-booking {
   color: #333;
+  font-size: 13px;
   font-family: "Montserrat";
+}
+
+.form-booking h2 {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.form-booking h3 {
+  font-size: 12px;
 }
 
 .form-booking span {
@@ -165,4 +175,23 @@ form input::placeholder {
 
 .box-form-item input::-moz-placeholder {
   color: transparent;
+}
+
+.sep-booking {
+  width: 50%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.congratulations {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.aproved {
+  color: green;
+  font-weight: bold;
+  text-transform: uppercase;
 }

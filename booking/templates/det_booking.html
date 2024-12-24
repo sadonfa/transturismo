@@ -90,6 +90,9 @@
           <input type="hidden"
                  name="public-key"
                  value="pub_prod_K4yQidpSx1kAqRLSzEQGHnHXKwui6FNT" />
+          <!-- <input type="hidden"
+        name="public-key"
+        value="pub_test_zePMlU8Dn0kqR1mquaIQYipIxcJ2eNiU">-->
           <input type="hidden" name="currency" value="COP" />
           <input type="hidden" name="amount-in-cents" value="{{ total }}00" />
           <input type="hidden" name="reference" value="{{ pk_reservas }}" />
@@ -97,7 +100,10 @@
           <!-- OPCIONALES -->
           <input type="hidden"
                  name="redirect-url"
-                 value="https://www.transturismocartagena.com.co/tours/" />
+                 value="https://www.transturismocartagena.com.co/respuesta/" />
+          <!--<input type="hidden"
+       name="redirect-url"
+       value="http://localhost:8000/respuesta/" />-->
           <button type="submit" class="btn-sw">Reservar</button>
         </form>
       </div>

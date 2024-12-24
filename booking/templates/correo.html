@@ -1,0 +1,243 @@
+{% load humanize %}
+<!DOCTYPE PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//ES” “https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table {
+                border:1px solid #555555 !important;
+                border-radius: 10px;
+                margin: 0px auto;
+                
+            }
+
+            a:hover{
+                color: #000000;
+                
+            }
+        </style>
+        <title>Document</title>
+    </head>
+    <body style="margin:0;padding:0;">
+        <table role="presentation"
+               style="width:95%;
+                      border-collapse:collapse;
+                      border:0;
+                      border-radius: 15px;
+                      border-spacing:0;
+                      background:#ffffff">
+            <tr>
+                <td align="center"
+                    style="padding:20px 30px;
+                           background-color: #ff8800"
+                    colspan="3">
+                    <img src="https://transturismocartagena.com.co/static/img/logo.png"
+                         alt="Logo Transturismo"
+                         width="125px">
+                    <h1 style="font-weight: bold; color: #ffffff;">Reserva # {{ nbooking }}</h1>
+                    <h2 style="margin: 0px; color: #111111  ;">Bienvenido a su Agencia Transturismo Cartagena</h2>
+                    <p style="margin: 0px; color: #111111  ;">Gracias por tu reserva los esperamos pronto.</p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" style="padding: 30px 10px 20px 50px;" colspan="2">
+                    <h1 style="font-weight: bold;
+                               font-size: 22px;
+                               color: #000000;
+                               margin: 0px">Datos de Viajero</h1>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"
+                    style="padding: 7px 5px 5px 0px"
+                    width="48%"
+                    colspan="1">
+                    <p style="text-align: right;
+                              font-size: 14px;
+                              font-weight: bold;
+                              color: #111111">Nombres</p>
+                    <p style="text-align: right;
+                              font-size: 14px;
+                              font-weight: bold;
+                              color: #111111">Apellidos</p>
+                    <p style="text-align: right;
+                              font-size: 14px;
+                              font-weight: bold;
+                              color: #111111">Celular</p>
+                    <p style="text-align: right;
+                              font-size: 14px;
+                              font-weight: bold;
+                              color: #111111">Correo</p>
+                    <p style="text-align: right;
+                              font-size: 14px;
+                              font-weight: bold;
+                              color: #111111">Pais</p>
+                    <p style="text-align: right;
+                              font-size: 14px;
+                              font-weight: bold;
+                              color: #111111">Ciudad</p>
+                </td>
+                <td align="center"
+                    style="padding: 7px 5px 5px 5px"
+                    width="48%"
+                    colspan="1">
+                    <p style="text-align: justify;
+                              font-size: 14px;
+                              font-weight: 400;
+                              color: #111111">{{ name }}</p>
+                    <p style="text-align: justify;
+                              font-size: 14px;
+                              font-weight: 400;
+                              color: #111111">{{ lastname }}</p>
+                    <p style="text-align: justify;
+                              font-size: 14px;
+                              font-weight: 400;
+                              color: #111111">{{ phone }}</p>
+                    <p style="text-align: justify;
+                              font-size: 14px;
+                              font-weight: 400;
+                              color: #111111">{{ correo }}</p>
+                    <p style="text-align: justify;
+                              font-size: 14px;
+                              font-weight: 400;
+                              color: #111111">{{ contry }}</p>
+                    <p style="text-align: justify;
+                              font-size: 14px;
+                              font-weight: 400;
+                              color: #111111">{{ city }}</p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" style="padding: 30px 10px 20px 50px;" colspan="2">
+                    <h1 style="font-weight: bold;
+                               font-size: 22px;
+                               color: #000000;
+                               margin: 0px">Datos de Tours</h1>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"
+                    style="padding: 7px 5px 5px 0px"
+                    width="48%"
+                    colspan="1">
+                    <p style="text-align: right;
+                              font-size: 14px;
+                              font-weight: bold;
+                              color: #111111">Fecha de reserva</p>
+                    <p style="text-align: right;
+                              font-size: 14px;
+                              font-weight: bold;
+                              color: #111111">Hotel</p>
+                    <p style="text-align: right;
+                              font-size: 14px;
+                              font-weight: bold;
+                              color: #111111">Tour</p>
+                    <p style="text-align: right;
+                              font-size: 14px;
+                              font-weight: bold;
+                              color: #111111">Cantidad Adultos</p>
+                    <p style="text-align: right;
+                              font-size: 14px;
+                              font-weight: bold;
+                              color: #111111">Cantidad Niños</p>
+                </td>
+                <td align="center"
+                    style="padding: 7px 5px 5px 5px"
+                    width="48%"
+                    colspan="1">
+                    <p style="text-align: justify;
+                              font-size: 14px;
+                              font-weight: 400;
+                              color: #111111">{{ checkin }}</p>
+                    <p style="text-align: justify;
+                              font-size: 14px;
+                              font-weight: 400;
+                              color: #111111">{{ hotel }}</p>
+                    <p style="text-align: justify;
+                              font-size: 14px;
+                              font-weight: 400;
+                              color: #111111">{{ tour }}</p>
+                    <p style="text-align: justify;
+                              font-size: 14px;
+                              font-weight: 400;
+                              color: #111111">{{ adults }}</p>
+                    <p style="text-align: justify;
+                              font-size: 14px;
+                              font-weight: 400;
+                              color: #111111">{{ childre }}</p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" style="padding: 30px 10px 20px 50px;" colspan="2">
+                    <h1 style="font-weight: bold;
+                               font-size: 22px;
+                               color: #000000;
+                               margin: 0px">Datos de Pago</h1>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" style="padding: 7px 5px 5px 0px;">
+                    <p style="text-align: right;
+                              font-size: 14px;
+                              font-weight: bold;
+                              color: #111111">Fecha</p>
+                    <p style="text-align: right;
+                              font-size: 14px;
+                              font-weight: bold;
+                              color: #111111">Metodo</p>
+                    <p style="text-align: right;
+                              font-size: 14px;
+                              font-weight: bold;
+                              color: #111111">Tarjeta</p>
+                    <p style="text-align: right;
+                              font-size: 14px;
+                              font-weight: bold;
+                              color: #111111">Tipo</p>
+                    <p style="text-align: right;
+                              font-size: 14px;
+                              font-weight: bold;
+                              color: #111111">Total Pagar</p>
+                </td>
+                <td align="center" style="padding: 7px 5px 5px 5px;">
+                    <p style="text-align: justify;
+                              font-size: 14px;
+                              font-weight: 400;
+                              color: #111111">{{ data }}</p>
+                    <p style="text-align: justify;
+                              font-size: 14px;
+                              font-weight: 400;
+                              color: #111111">{{ method }}</p>
+                    <p style="text-align: justify;
+                              font-size: 14px;
+                              font-weight: 400;
+                              color: #111111">{{ card }}</p>
+                    <p style="text-align: justify;
+                              font-size: 14px;
+                              font-weight: 400;
+                              color: #111111">{{ card_type }}</p>
+                    <p style="text-align: justify;
+                              font-size: 14px;
+                              font-weight: 400;
+                              color: #111111">{{ total|intcomma }}</p>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" style="padding:20px 30px;" colspan="2">
+                    <hr style="width: 50%;">
+                    <p class="m-0 mbt">
+                        <a href="https://transturismocartagena.com.co/page/6/politicas-de-privacidad/"
+                           style="color: #666666;
+                                  text-decoration: none">Politicas de Privacidad -</a>
+                        <a href="#"
+                           style="color: #666666;
+                                  text-decoration: none;
+                                  hover: #000000">Cookies -</a>
+                        <a href="#"  style="color: #666666; text-decoration: none">Aviso Legal</a>
+                    </p>
+                    <p style="color: #000000;">&copy; Transturismo cartagena 2024.</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

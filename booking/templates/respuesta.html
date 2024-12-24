@@ -9,16 +9,18 @@
         <div class="barra">.</div>
         <div class="form-booking">
             <h2>{{ title }}</h2>
-            <h3>{{ id }}</h3>
+            <h3>Reserva # {{ id }}</h3>
+            {% if tour.data.status == "APPROVED" %}<p class="aproved">Aprobado</p>{% endif %}
+            <hr class="sep-booking" />
             <div class="box-form-booking">
                 <div class="box-form-item">
                     <p>
-                        <span>Nombre</span>{{ tour.data.created_at }}
+                        <span>Nombre</span>{{ booking.name }}
                     </p>
                 </div>
                 <div class="box-form-item">
                     <p>
-                        <span>Apellido</span>{{ tour.data.status }}
+                        <span>Apellido</span>{{ booking.lastname }}
                     </p>
                 </div>
             </div>
@@ -30,7 +32,7 @@
                 </div>
                 <div class="box-form-item">
                     <p>
-                        <span>Correo</span>{{ booking.mail }}
+                        <span>Fecha de reserva</span>{{ booking.checkin }}
                     </p>
                 </div>
             </div>
@@ -73,14 +75,16 @@
             <div class="box-form-booking">
                 <div class="box-form-item">
                     <p>
-                        <span>valor adultos</span>$  COP
+                        <span>valor adultos</span>$ {{ booking.cash|intcomma }} COP
                     </p>
                 </div>
                 <div class="box-form-item">
                     <p>
-                        <span>valor Total</span>$ {{ tour.data.amount_in_cents|intcomma }} COP
+                        <span>valor Total</span>$ {{ booking.total|intcomma }} COP
                     </p>
                 </div>
             </div>
+            <span class="congratulations">¡Gracias por su compra!</span>
+            <a href="#" class="btn">Otros toures</a>
         </div>
     {% endblock content %}
