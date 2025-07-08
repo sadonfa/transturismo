@@ -1,3 +1,8 @@
 .env
 db.sqlite3
 media/*
+tours/migrations/*
+pages/migrations/*
+booking/migrations/*
+core/migrations/*
+transfers/migrations/*

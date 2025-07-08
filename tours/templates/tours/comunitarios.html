@@ -1,0 +1,29 @@
+{% extends 'layouts/index.html' %} 
+{% block title %} {{ title }} {% endblock title %} 
+{% load humanize %} {% block content %} 
+{% if api.data.status == 'APPROVED' %}
+<div class="susses">Gracias por tu compra</div>
+{% endif %}
+<section class="tours">
+  {% for tour in ofertas %}
+  <article>
+    <div class="image-tour">
+      <img src="{{ tour.image1.url }}" alt="{{ tour.title }}" />
+    </div>
+    <h3>{{ tour.title }}</h3>
+    <p>{{ tour.description|slice:":100" }} ...</p>
+    <div class="foo-arti">
+      <p>$ {{ tour.cash|intcomma }} COP</p>
+      <a href="{% url 'check' tour.id 'tour' %}" class="btn">Reservar</a>
+    </div>
+    <div class="enlace-reserva">
+      <a href="{% url 'tour' tour.id tour.title|slugify %}" class="text-link"
+        >Más detalles</a
+      >
+      {% comment %}
+      <a href="{% url 'tour' tour.id %}" class="text-link">Más detalles</a> {% endcomment %}
+    </div>
+  </article>
+  {% endfor %}
+</section>
+{% endblock content %}

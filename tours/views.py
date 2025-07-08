@@ -68,3 +68,12 @@ def ofertas(request):
         'title': 'Ofertas',
         'ofertas': ofertas
     })
+
+def comunitario(request):
+    
+    comunitario = Tours.objects.filter(category=6)
+
+    return render(request, "tours/comunitarios.html", {
+        'title': 'Comunitarios',
+        'ofertas': comunitario
+    })
