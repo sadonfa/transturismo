@@ -25,5 +25,26 @@
     </div>
   </article>
   {% endfor %}
+  {% for comunitario in comunitarios %}
+  <article>
+    <div class="image-tour">
+      <img src="{{ comunitario.image1.url }}" alt="{{ comunitario.title }}" />
+    </div>
+    <h3>{{ comunitario.title }}</h3>
+    <p>{{ comunitario.description|slice:":100" }} ...</p>
+    <div class="foo-arti-cot">
+
+
+      <a href="https://wa.link/u1462m" class="btn">Cotizar</a>
+    </div>
+    <div class="enlace-reserva">
+      <a href="#" class="text-link"
+        >Más detalles</a
+      >
+      {% comment %}
+      <a href="{% url 'tour' tour.id %}" class="text-link">Más detalles</a> {% endcomment %}
+    </div>
+  </article>
+  {% endfor %}
 </section>
 {% endblock content %}

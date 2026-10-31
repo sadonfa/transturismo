@@ -593,6 +593,15 @@ body {
   margin-top: 15px;
 }
 
+.tours article .foo-arti-cot {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 15px;
+  margin-right: 20px;
+  margin-top: 15px;
+}
+
 .tours article .foo-arti p {
   font-size: 24px;
   color: #ff8800;
@@ -718,4 +727,69 @@ body {
 .redes i:hover {
   cursor: pointer;
   color: #222;
+}
+
+
+
+/* Navegacion principal */
+
+/* Quitar puntos de lista y margen */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Menú principal en horizontal */
+.menu > li {
+  display: inline-block;
+  position: relative; /* Importante para posicionar el submenú */
+}
+
+/* Estilo de los enlaces */
+.menu a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  background: #333;
+  color: white;
+}
+
+/* Ocultar el submenú inicialmente */
+.submenu {
+  display: none;
+  position: absolute;
+  width: 150px;
+  margin-top: 0.5rem;
+  padding-bottom: 3rem;
+  z-index: 2;
+  
+}
+
+
+/* Mostrar submenú al pasar el mouse (Hover) */
+.nav-links li:hover > .submenu {
+  display: block;
+  
+}
+
+/* Estilo vertical para los elementos del submenú */
+.submenu li {
+  display: block;
+  width: 20rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  background-color: #fff;
+  border-radius: 30px;
+  overflow: hidden;
+  /* padding-top: 1.4rem;
+  padding-bottom: 1.4rem; */
+  
+}
+
+.submenu li > a {
+  display: block;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  border-radius: 3rem;
 }

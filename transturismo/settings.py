@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os
 import environ
 from pathlib import Path
+from django.urls import reverse_lazy
 # from django.
 
 env = environ.Env(
@@ -33,17 +34,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECRET_KEY = 'django-insecure-6o-fotlr=@@k_&lthz3it_u%n&^la2&a_l749jq02=w-ddy5wc'
 
 SECRET_KEY = env('SECRET_KEY')
-DEBUG = env('DEBUG')
+DEBUG = env.bool('DEBUG', default=False)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['127.0.0.1', 'localhost'])
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    "unfold", 
+    "unfold.contrib.filters",
+    "unfold.contrib.forms",
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -51,6 +56,8 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'corsheaders',
     'django_ckeditor_5',
     'booking.apps.BookingConfig',
     'core',
@@ -60,6 +67,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -88,17 +97,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'transturismo.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 
 
 DATABASES = {
@@ -164,100 +162,147 @@ EMAIL_HOST = env('EMAIL_HOST')
 EMAIL_HOST_USER = env('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = env('EMAIL_PORT')
+EMAIL_USE_SSL = True
+ADMIN_EMAIL = env('ADMIN_EMAIL', default=EMAIL_HOST_USER)
+DEFAULT_FROM_EMAIL = f"Transturismo Cartagena <{EMAIL_HOST_USER}>"
 
-        
+
+# settings.py
+# Leer los orígenes permitidos desde el .env separados por comas
+cors_origins_str = env('CORS_ALLOWED_ORIGINS', default="http://localhost:5173,http://127.0.0.1:5173")
+CORS_ALLOWED_ORIGINS = cors_origins_str.split(',')
+
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:5173",
+#     "http://127.0.0.1:5173",
+# ]
+
+GOOGLE_PLACE_ID = env('GOOGLE_PLACE_ID')
+GOOGLE_API_KEY = env('GOOGLE_API_KEY')
+
+WOMPI_BASE_URL = env('WOMPI_BASE_URL')
+WOMPI_PUBLIC_KEY = env('WOMPI_BASE_URL')
+WOMPI_PRIVATE_KEY = env('WOMPI_BASE_URL')
+WOMPI_INTEGRITY_SECRET = env('WOMPI_BASE_URL')
+
+
+UNFOLD = {
+    "SITE_HEADER": "Transturismo Cartagena",
+    "SITE_TITLE": "Admin Transturismo",
+    "INDEX_TITLE": "Panel de Control",
+    "SIDEBAR": {
+        "show_search": True,
+        "show_all_applications": False,
+        "navigation": [
+            {
+                "title": "Catálogo & Comercial",
+                "separator": True,
+                "items": [
+                    {
+                        "title": "Tours y Experiencias",
+                        "icon": "explore",
+                        "link": reverse_lazy("admin:tours_tours_changelist"),
+                    },
+                    {
+                        "title": "Flota de Transportes",
+                        "icon": "directions_bus",
+                        "link": reverse_lazy("admin:transfers_transfers_changelist"),
+                    },
+                    {
+                        "title": "Categorías de Tours",
+                        "icon": "category",
+                        "link": reverse_lazy("admin:tours_category_changelist"),
+                    },
+                ],
+            },
+            {
+                "title": "Reservas & Clientes",
+                "separator": True,
+                "items": [
+                    {
+                        "title": "Reservas",
+                        "icon": "confirmation_number",
+                        "link": reverse_lazy("admin:booking_booking_changelist"),
+                    },
+                    {
+                        "title": "Reseñas de Clientes",
+                        "icon": "star",
+                        "link": reverse_lazy("admin:tours_review_changelist"),
+                    },
+                    {
+                        "title": "Boletín de Suscriptores",
+                        "icon": "mail",
+                        "link": reverse_lazy("admin:tours_newsletter_changelist"),
+                    },
+                ],
+            },
+            {
+                "title": "Contenido del Sitio Web",
+                "separator": True,
+                "items": [
+                    {
+                        "title": "Banners Principales",
+                        "icon": "view_carousel",
+                        "link": reverse_lazy("admin:core_herobanner_changelist"),
+                    },
+                    {
+                        "title": "Páginas Estáticas",
+                        "icon": "description",
+                        "link": reverse_lazy("admin:pages_page_changelist"),
+                    },
+                    {
+                        "title": "Lugares (Inspírate)",
+                        "icon": "photo_camera",
+                        "link": reverse_lazy("admin:tours_inspirateplace_changelist"),
+                    },
+                    {
+                        "title": "Sección Cenas",
+                        "icon": "restaurant",
+                        "link": reverse_lazy("admin:tours_cena_changelist"),
+                    },
+                    {
+                        "title": "Tours Comunitarios",
+                        "icon": "groups",
+                        "link": reverse_lazy("admin:tours_comunitario_changelist"),
+                    },
+                ],
+            },
+            {
+                "title": "Configuración & Usuarios",
+                "separator": True,
+                "items": [
+                    {
+                        "title": "Usuarios del Sistema",
+                        "icon": "person",
+                        "link": reverse_lazy("admin:auth_user_changelist"),
+                    },
+                    {
+                        "title": "Grupos de Permisos",
+                        "icon": "group",
+                        "link": reverse_lazy("admin:auth_group_changelist"),
+                    },
+                ],
+            },
+        ],
+    },
+}
 
 # Configuracion de CKEditor
-
-
-customColorPalette = [
-        {
-            'color': 'hsl(4, 90%, 58%)',
-            'label': 'Red'
-        },
-        {
-            'color': 'hsl(340, 82%, 52%)',
-            'label': 'Pink'
-        },
-        {
-            'color': 'hsl(291, 64%, 42%)',
-            'label': 'Purple'
-        },
-        {
-            'color': 'hsl(262, 52%, 47%)',
-            'label': 'Deep Purple'
-        },
-        {
-            'color': 'hsl(231, 48%, 48%)',
-            'label': 'Indigo'
-        },
-        {
-            'color': 'hsl(207, 90%, 54%)',
-            'label': 'Blue'
-        },
-    ]
-
-# CKEDITOR_5_CUSTOM_CSS = 'path_to.css' # optional
-# CKEDITOR_5_FILE_STORAGE = "path_to_storage.CustomStorage" # optional
 CKEDITOR_5_CONFIGS = {
-
-'default': {
-    'toolbar': ['heading', '|', 'bold', 'italic', 'link','blockQuote',
-                'bulletedList', 'numberedList',  'imageUpload', ],
-
-},
-
-'extends': {
-    'blockToolbar': [
-        'paragraph', 'heading1', 'heading2', 'heading3',
-        '|',
-        'bulletedList', 'numberedList',
-        '|',
-        'blockQuote',
-    ],
-    'toolbar': ['heading', '|', 'outdent', 'indent', '|', 'bold', 'italic', 'link', 'underline', 'strikethrough',
-    'code','subscript', 'superscript', 'highlight', '|', 'codeBlock', 'sourceEditing', 'insertImage',
-                'bulletedList', 'numberedList', 'todoList', '|',  'blockQuote', 'imageUpload', '|',
-                'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', 'mediaEmbed', 'removeFormat',
-                'insertTable',],
-    'image': {
-        'toolbar': ['imageTextAlternative', '|', 'imageStyle:alignLeft',
-                    'imageStyle:alignRight', 'imageStyle:alignCenter', 'imageStyle:side',  '|'],
-        'styles': [
-            'full',
-            'side',
-            'alignLeft',
-            'alignRight',
-            'alignCenter',
-        ]
-
-    },
-    'table': {
-        'contentToolbar': [ 'tableColumn', 'tableRow', 'mergeTableCells',
-        'tableProperties', 'tableCellProperties' ],
-        'tableProperties': {
-            'borderColors': customColorPalette,
-            'backgroundColors': customColorPalette
+    'tour_info': {
+        'toolbar': [
+            'heading', '|',
+            'bold', 'italic', '|',
+            'bulletedList', 'numberedList', '|',
+            'undo', 'redo'
+        ],
+        'heading': {
+            'options': [
+                {'model': 'paragraph', 'title': 'Párrafo normal', 'class': 'ck-heading_paragraph'},
+                {'model': 'heading3', 'view': 'h3', 'title': 'Subtítulo', 'class': 'ck-heading_heading3'},
+            ]
         },
-        'tableCellProperties': {
-            'borderColors': customColorPalette,
-            'backgroundColors': customColorPalette
-        }
-    },
-    'heading' : {
-        'options': [
-            { 'model': 'paragraph', 'title': 'Paragraph', 'class': 'ck-heading_paragraph' },
-            { 'model': 'heading1', 'view': 'h1', 'title': 'Heading 1', 'class': 'ck-heading_heading1' },
-            { 'model': 'heading2', 'view': 'h2', 'title': 'Heading 2', 'class': 'ck-heading_heading2' },
-            { 'model': 'heading3', 'view': 'h3', 'title': 'Heading 3', 'class': 'ck-heading_heading3' }
-        ]
+        'height': 280,
+        'width': '100%',
     }
-},
-'list': {
-    'properties': {
-        'styles': 'true',
-        'startIndex': 'true',
-        'reversed': 'true',
-    }
-
-}}
+}

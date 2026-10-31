@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f8fafc; padding: 20px; margin: 0;">
+  <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 24px;">
+    <h2 style="color: #f59e0b; margin-top: 0;">¡Hola, {{ cliente_nombre }}!</h2>
+    <p style="color: #334155; font-size: 14px;">Hemos recibido tu pago y tu reserva se encuentra <strong>CONFIRMADA</strong> con éxito.</p>
+    
+    <div style="background-color: #f8fafc; border-left: 4px solid #f59e0b; padding: 16px; margin: 20px 0; border-radius: 8px;">
+      <p style="margin: 4px 0; font-size: 13px; color: #475569;"><strong>Referencia de Reserva:</strong> #{{ referencia }}</p>
+      <p style="margin: 4px 0; font-size: 13px; color: #475569;"><strong>Servicio / Tour / Traslado:</strong> {{ servicio }}</p>
+      <p style="margin: 4px 0; font-size: 13px; color: #475569;"><strong>Fecha del Servicio:</strong> {{ fecha }}</p>
+      <p style="margin: 4px 0; font-size: 13px; color: #475569;"><strong>Ubicación / Punto de Recojo:</strong> {{ hotel_origen }}</p>
+      <p style="margin: 4px 0; font-size: 15px; color: #0f172a;"><strong>Total Pagado:</strong> ${{ total_cop }} COP</p>
+    </div>
+
+    <p style="color: #64748b; font-size: 12px; line-height: 1.5;">Si necesitas realizar alguna modificación o tienes preguntas sobre tu traslado/tour, puedes responder a este correo o escribirnos directamente a nuestro WhatsApp.</p>
+    <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 20px 0;" />
+    <p style="text-align: center; font-size: 11px; color: #94a3b8;">© 2026 Transturismo Cartagena. Todos los derechos reservados.</p>
+  </div>
+</body>
+</html>

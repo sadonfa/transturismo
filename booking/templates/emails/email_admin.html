@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f8fafc; padding: 20px; margin: 0;">
+  <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border: 1px solid #cbd5e1; border-radius: 16px; padding: 24px;">
+    <h2 style="color: #0f172a; margin-top: 0;">🚨 NUEVA RESERVA REGISTRADA</h2>
+    <p style="color: #334155; font-size: 14px;">Se ha completado un nuevo pago a través de la plataforma web:</p>
+    
+    <table style="width: 100%; text-align: left; font-size: 13px; color: #334155; border-collapse: collapse;">
+      <tr><td style="padding: 6px 0;"><strong>Referencia:</strong></td><td>#{{ referencia }}</td></tr>
+      <tr><td style="padding: 6px 0;"><strong>Cliente:</strong></td><td>{{ cliente_nombre }}</td></tr>
+      <tr><td style="padding: 6px 0;"><strong>Email:</strong></td><td>{{ cliente_email }}</td></tr>
+      <tr><td style="padding: 6px 0;"><strong>Teléfono / WA:</strong></td><td>{{ telefono }}</td></tr>
+      <tr><td style="padding: 6px 0;"><strong>Servicio:</strong></td><td>{{ servicio }}</td></tr>
+      <tr><td style="padding: 6px 0;"><strong>Fecha:</strong></td><td>{{ fecha }}</td></tr>
+      <tr><td style="padding: 6px 0;"><strong>Ubicación:</strong></td><td>{{ hotel_origen }}</td></tr>
+      <tr><td style="padding: 6px 0;"><strong>Monto Pagado:</strong></td><td><strong>${{ total_cop }} COP</strong></td></tr>
+    </table>
+  </div>
+</body>
+</html>

@@ -37,11 +37,16 @@
     <title>Transturismo Cartagena | {% block title %}{% endblock %}</title>
   </head>
   <body>
+
     <div class="navegate-h">
       <div class="logo">
         <img src="{% static 'img/logo.png' %} " alt="Logo Transturismo" />
         <span>RNT48551</span>
       </div>
+
+
+      <!--
+     
       <nav id="nav" class="main-nav">
         <div class="nav-links">
           <a
@@ -78,6 +83,48 @@
           >
         </div>
       </nav>
+ -->
+
+      <nav id="nav" class="main-nav">
+        <ul class="nav-links">
+          <li><a
+            href="{% url 'home' %}"
+            class="link-item {% if request.path == '/inicio/' %}active{% endif %}"
+            >Inicio</a
+          ></li>
+          <li><a
+            href="{% url 'transfers' %}"
+            class="link-item {% if request.path == '/transporte/' %}active{% endif %}"
+            >Traslados</a
+          ></li>
+          <li>
+            <a href="#" class="link-item">Sol y Playa</a>
+            <!-- Submenú -->
+            <ul class="submenu">
+              <li><a href="#" class="link-item">Isla de tierra bomba </a></li>
+              <li><a href="#" class="link-item">Islas del Rosario </a></li>
+              <li><a href="#" class="link-item">Playa blanca Baru</a></li>
+            </ul>
+          </li>
+          <li><a
+            href="{% url 'citytours' %}"
+            class="link-item {% if request.path == '/citytours/' %}active{% endif %}"
+            >City Tours</a
+          ></li>
+          <li><a
+            href="{% url 'cenas' %}"
+            class="link-item {% if request.path == '/cenas/' %}active{% endif %}"
+            >Cenas Especiales</a
+          ></li>
+          <li><a href="{% url 'comunitarios' %}" class="link-item"
+            >Turismo Comunitario</a
+          ></li>
+          <li><a href="{% url 'ofertas' %}" class="link-item--off active-off"
+            >Ofertas</a
+          ></li>
+        </ul>
+      </nav>
+
       <button id="button-menu" class="button-menu">
         <span></span>
         <span></span>
